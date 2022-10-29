@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AreYouUp">
+        <s:complexType />
+      </s:element>
+      <s:element name="AreYouUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AreYouUpResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleFileData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="force" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleFileDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSingleFileDataResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilePaths">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="directoryPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchString" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="filter" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilePathsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFilePathsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="docData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveDocumentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CopyFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sourceFilePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="destinationFilePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopyFileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopyFolderFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sourceFolderPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="destinationFolderPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopyFolderFilesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteFolderFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filepath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFolderFilesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPBMDetailData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SettlementDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPBMDetailDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPBMDetailDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPBMErrorFileData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPBMErrorFileDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPBMErrorFileDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDBData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="command" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDBDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDBDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AreYouUpSoapIn">
+    <wsdl:part name="parameters" element="tns:AreYouUp" />
+  </wsdl:message>
+  <wsdl:message name="AreYouUpSoapOut">
+    <wsdl:part name="parameters" element="tns:AreYouUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileList" />
+  </wsdl:message>
+  <wsdl:message name="GetFileListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleFileDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSingleFileData" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleFileDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSingleFileDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFilePathsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFilePaths" />
+  </wsdl:message>
+  <wsdl:message name="GetFilePathsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFilePathsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDocument" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFolder" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CopyFile" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CopyFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFile" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopyFolderFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:CopyFolderFiles" />
+  </wsdl:message>
+  <wsdl:message name="CopyFolderFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:CopyFolderFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFolderFiles" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFolderFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPBMDetailDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPBMDetailData" />
+  </wsdl:message>
+  <wsdl:message name="GetPBMDetailDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPBMDetailDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPBMErrorFileDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPBMErrorFileData" />
+  </wsdl:message>
+  <wsdl:message name="GetPBMErrorFileDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPBMErrorFileDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDBDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDBData" />
+  </wsdl:message>
+  <wsdl:message name="GetDBDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDBDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AreYouUpHttpGetIn" />
+  <wsdl:message name="AreYouUpHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetFileListHttpGetIn">
+    <wsdl:part name="path" type="s:string" />
+    <wsdl:part name="searchString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFileListHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleFileDataHttpGetIn">
+    <wsdl:part name="filePath" type="s:string" />
+    <wsdl:part name="force" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleFileDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetFilePathsHttpGetIn">
+    <wsdl:part name="directoryPath" type="s:string" />
+    <wsdl:part name="searchString" type="s:string" />
+    <wsdl:part name="filter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFilePathsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentHttpGetIn">
+    <wsdl:part name="path" type="s:string" />
+    <wsdl:part name="docData" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderHttpGetIn">
+    <wsdl:part name="path" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderHttpGetOut" />
+  <wsdl:message name="CopyFileHttpGetIn">
+    <wsdl:part name="sourceFilePath" type="s:string" />
+    <wsdl:part name="destinationFilePath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileHttpGetOut" />
+  <wsdl:message name="DeleteFileHttpGetIn">
+    <wsdl:part name="filePath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CopyFolderFilesHttpGetIn">
+    <wsdl:part name="sourceFolderPath" type="s:string" />
+    <wsdl:part name="destinationFolderPath" type="s:string" />
+    <wsdl:part name="searchString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CopyFolderFilesHttpGetOut" />
+  <wsdl:message name="DeleteFolderFilesHttpGetIn">
+    <wsdl:part name="filepath" type="s:string" />
+    <wsdl:part name="searchstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderFilesHttpGetOut" />
+  <wsdl:message name="GetPBMDetailDataHttpGetIn">
+    <wsdl:part name="SettlementDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPBMDetailDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetPBMErrorFileDataHttpGetIn" />
+  <wsdl:message name="GetPBMErrorFileDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDBDataHttpGetIn">
+    <wsdl:part name="command" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDBDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AreYouUpHttpPostIn" />
+  <wsdl:message name="AreYouUpHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetFileListHttpPostIn">
+    <wsdl:part name="path" type="s:string" />
+    <wsdl:part name="searchString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFileListHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleFileDataHttpPostIn">
+    <wsdl:part name="filePath" type="s:string" />
+    <wsdl:part name="force" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleFileDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetFilePathsHttpPostIn">
+    <wsdl:part name="directoryPath" type="s:string" />
+    <wsdl:part name="searchString" type="s:string" />
+    <wsdl:part name="filter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFilePathsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentHttpPostIn">
+    <wsdl:part name="path" type="s:string" />
+    <wsdl:part name="docData" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderHttpPostIn">
+    <wsdl:part name="path" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderHttpPostOut" />
+  <wsdl:message name="CopyFileHttpPostIn">
+    <wsdl:part name="sourceFilePath" type="s:string" />
+    <wsdl:part name="destinationFilePath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileHttpPostOut" />
+  <wsdl:message name="DeleteFileHttpPostIn">
+    <wsdl:part name="filePath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CopyFolderFilesHttpPostIn">
+    <wsdl:part name="sourceFolderPath" type="s:string" />
+    <wsdl:part name="destinationFolderPath" type="s:string" />
+    <wsdl:part name="searchString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CopyFolderFilesHttpPostOut" />
+  <wsdl:message name="DeleteFolderFilesHttpPostIn">
+    <wsdl:part name="filepath" type="s:string" />
+    <wsdl:part name="searchstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderFilesHttpPostOut" />
+  <wsdl:message name="GetPBMDetailDataHttpPostIn">
+    <wsdl:part name="SettlementDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPBMDetailDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetPBMErrorFileDataHttpPostIn" />
+  <wsdl:message name="GetPBMErrorFileDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDBDataHttpPostIn">
+    <wsdl:part name="command" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDBDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="AreYouUp">
+      <wsdl:input message="tns:AreYouUpSoapIn" />
+      <wsdl:output message="tns:AreYouUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <wsdl:input message="tns:GetFileListSoapIn" />
+      <wsdl:output message="tns:GetFileListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleFileData">
+      <wsdl:input message="tns:GetSingleFileDataSoapIn" />
+      <wsdl:output message="tns:GetSingleFileDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilePaths">
+      <wsdl:input message="tns:GetFilePathsSoapIn" />
+      <wsdl:output message="tns:GetFilePathsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <wsdl:input message="tns:SaveDocumentSoapIn" />
+      <wsdl:output message="tns:SaveDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <wsdl:input message="tns:CreateFolderSoapIn" />
+      <wsdl:output message="tns:CreateFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <wsdl:input message="tns:CopyFileSoapIn" />
+      <wsdl:output message="tns:CopyFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input message="tns:DeleteFileSoapIn" />
+      <wsdl:output message="tns:DeleteFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolderFiles">
+      <wsdl:input message="tns:CopyFolderFilesSoapIn" />
+      <wsdl:output message="tns:CopyFolderFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderFiles">
+      <wsdl:input message="tns:DeleteFolderFilesSoapIn" />
+      <wsdl:output message="tns:DeleteFolderFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMDetailData">
+      <wsdl:input message="tns:GetPBMDetailDataSoapIn" />
+      <wsdl:output message="tns:GetPBMDetailDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMErrorFileData">
+      <wsdl:input message="tns:GetPBMErrorFileDataSoapIn" />
+      <wsdl:output message="tns:GetPBMErrorFileDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDBData">
+      <wsdl:input message="tns:GetDBDataSoapIn" />
+      <wsdl:output message="tns:GetDBDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="AreYouUp">
+      <wsdl:input message="tns:AreYouUpHttpGetIn" />
+      <wsdl:output message="tns:AreYouUpHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <wsdl:input message="tns:GetFileListHttpGetIn" />
+      <wsdl:output message="tns:GetFileListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleFileData">
+      <wsdl:input message="tns:GetSingleFileDataHttpGetIn" />
+      <wsdl:output message="tns:GetSingleFileDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilePaths">
+      <wsdl:input message="tns:GetFilePathsHttpGetIn" />
+      <wsdl:output message="tns:GetFilePathsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <wsdl:input message="tns:SaveDocumentHttpGetIn" />
+      <wsdl:output message="tns:SaveDocumentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <wsdl:input message="tns:CreateFolderHttpGetIn" />
+      <wsdl:output message="tns:CreateFolderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <wsdl:input message="tns:CopyFileHttpGetIn" />
+      <wsdl:output message="tns:CopyFileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input message="tns:DeleteFileHttpGetIn" />
+      <wsdl:output message="tns:DeleteFileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolderFiles">
+      <wsdl:input message="tns:CopyFolderFilesHttpGetIn" />
+      <wsdl:output message="tns:CopyFolderFilesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderFiles">
+      <wsdl:input message="tns:DeleteFolderFilesHttpGetIn" />
+      <wsdl:output message="tns:DeleteFolderFilesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMDetailData">
+      <wsdl:input message="tns:GetPBMDetailDataHttpGetIn" />
+      <wsdl:output message="tns:GetPBMDetailDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMErrorFileData">
+      <wsdl:input message="tns:GetPBMErrorFileDataHttpGetIn" />
+      <wsdl:output message="tns:GetPBMErrorFileDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDBData">
+      <wsdl:input message="tns:GetDBDataHttpGetIn" />
+      <wsdl:output message="tns:GetDBDataHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="AreYouUp">
+      <wsdl:input message="tns:AreYouUpHttpPostIn" />
+      <wsdl:output message="tns:AreYouUpHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <wsdl:input message="tns:GetFileListHttpPostIn" />
+      <wsdl:output message="tns:GetFileListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleFileData">
+      <wsdl:input message="tns:GetSingleFileDataHttpPostIn" />
+      <wsdl:output message="tns:GetSingleFileDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilePaths">
+      <wsdl:input message="tns:GetFilePathsHttpPostIn" />
+      <wsdl:output message="tns:GetFilePathsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <wsdl:input message="tns:SaveDocumentHttpPostIn" />
+      <wsdl:output message="tns:SaveDocumentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <wsdl:input message="tns:CreateFolderHttpPostIn" />
+      <wsdl:output message="tns:CreateFolderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <wsdl:input message="tns:CopyFileHttpPostIn" />
+      <wsdl:output message="tns:CopyFileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input message="tns:DeleteFileHttpPostIn" />
+      <wsdl:output message="tns:DeleteFileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolderFiles">
+      <wsdl:input message="tns:CopyFolderFilesHttpPostIn" />
+      <wsdl:output message="tns:CopyFolderFilesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderFiles">
+      <wsdl:input message="tns:DeleteFolderFilesHttpPostIn" />
+      <wsdl:output message="tns:DeleteFolderFilesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMDetailData">
+      <wsdl:input message="tns:GetPBMDetailDataHttpPostIn" />
+      <wsdl:output message="tns:GetPBMDetailDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMErrorFileData">
+      <wsdl:input message="tns:GetPBMErrorFileDataHttpPostIn" />
+      <wsdl:output message="tns:GetPBMErrorFileDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDBData">
+      <wsdl:input message="tns:GetDBDataHttpPostIn" />
+      <wsdl:output message="tns:GetDBDataHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AreYouUp">
+      <soap:operation soapAction="http://tempuri.org/AreYouUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <soap:operation soapAction="http://tempuri.org/GetFileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleFileData">
+      <soap:operation soapAction="http://tempuri.org/GetSingleFileData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilePaths">
+      <soap:operation soapAction="http://tempuri.org/GetFilePaths" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <soap:operation soapAction="http://tempuri.org/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <soap:operation soapAction="http://tempuri.org/CreateFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <soap:operation soapAction="http://tempuri.org/CopyFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap:operation soapAction="http://tempuri.org/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolderFiles">
+      <soap:operation soapAction="http://tempuri.org/CopyFolderFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderFiles">
+      <soap:operation soapAction="http://tempuri.org/DeleteFolderFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMDetailData">
+      <soap:operation soapAction="http://tempuri.org/GetPBMDetailData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMErrorFileData">
+      <soap:operation soapAction="http://tempuri.org/GetPBMErrorFileData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDBData">
+      <soap:operation soapAction="http://tempuri.org/GetDBData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AreYouUp">
+      <soap12:operation soapAction="http://tempuri.org/AreYouUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <soap12:operation soapAction="http://tempuri.org/GetFileList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleFileData">
+      <soap12:operation soapAction="http://tempuri.org/GetSingleFileData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilePaths">
+      <soap12:operation soapAction="http://tempuri.org/GetFilePaths" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <soap12:operation soapAction="http://tempuri.org/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <soap12:operation soapAction="http://tempuri.org/CreateFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <soap12:operation soapAction="http://tempuri.org/CopyFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolderFiles">
+      <soap12:operation soapAction="http://tempuri.org/CopyFolderFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderFiles">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFolderFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMDetailData">
+      <soap12:operation soapAction="http://tempuri.org/GetPBMDetailData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMErrorFileData">
+      <soap12:operation soapAction="http://tempuri.org/GetPBMErrorFileData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDBData">
+      <soap12:operation soapAction="http://tempuri.org/GetDBData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="AreYouUp">
+      <http:operation location="/AreYouUp" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <http:operation location="/GetFileList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleFileData">
+      <http:operation location="/GetSingleFileData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilePaths">
+      <http:operation location="/GetFilePaths" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <http:operation location="/SaveDocument" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <http:operation location="/CreateFolder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <http:operation location="/CopyFile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <http:operation location="/DeleteFile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolderFiles">
+      <http:operation location="/CopyFolderFiles" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderFiles">
+      <http:operation location="/DeleteFolderFiles" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMDetailData">
+      <http:operation location="/GetPBMDetailData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMErrorFileData">
+      <http:operation location="/GetPBMErrorFileData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDBData">
+      <http:operation location="/GetDBData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="AreYouUp">
+      <http:operation location="/AreYouUp" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <http:operation location="/GetFileList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleFileData">
+      <http:operation location="/GetSingleFileData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilePaths">
+      <http:operation location="/GetFilePaths" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <http:operation location="/SaveDocument" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <http:operation location="/CreateFolder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <http:operation location="/CopyFile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <http:operation location="/DeleteFile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFolderFiles">
+      <http:operation location="/CopyFolderFiles" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderFiles">
+      <http:operation location="/DeleteFolderFiles" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMDetailData">
+      <http:operation location="/GetPBMDetailData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPBMErrorFileData">
+      <http:operation location="/GetPBMErrorFileData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDBData">
+      <http:operation location="/GetDBData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost/FileMover/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost/FileMover/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://localhost/FileMover/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://localhost/FileMover/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

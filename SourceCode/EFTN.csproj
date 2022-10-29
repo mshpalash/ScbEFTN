@@ -1,0 +1,3299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91F89993-0F74-4A59-A235-34E7DEE1BBB6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EFTN</RootNamespace>
+    <AssemblyName>EFTN</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca" />
+    <Reference Include="MICREncrypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MICREncrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="system.data.oracleclient, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\system.data.oracleclient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="AdvicePrintStatusCA.aspx" />
+    <Content Include="ApprovedDishonor.aspx" />
+    <Content Include="BBReconciliataionReportCA.aspx" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="Branches.aspx" />
+    <Content Include="BulkTransactionListCsvFilterForBatch.aspx" />
+    <Content Include="BulkTransactionListCsvMovedForBatch.aspx" />
+    <Content Include="BulkTransactionListCsvSCB.aspx" />
+    <Content Include="ChangeCheckerPassword.aspx" />
+    <Content Include="ChangeCSGUserPassword.aspx" />
+    <Content Include="ChangeMakerPassword.aspx" />
+    <Content Include="ChangeUserPassword.aspx" />
+    <Content Include="ContestedDishonor.aspx" />
+    <Content Include="ContestedFiles.aspx" />
+    <Content Include="BulkReturnUpload.aspx" />
+    <Content Include="CityDebitAccountManagement.aspx" />
+    <Content Include="BranchWiseSettlementReportCA.aspx" />
+    <Content Include="BACHBranchReportCA.aspx" />
+    <Content Include="CBSRejectedTXNManagement.aspx" />
+    <Content Include="BatchWiseRejectedTransactionDetails.aspx" />
+    <Content Include="BatchWiseDebitTransactionDetails.aspx" />
+    <Content Include="AccountEnquiry.aspx" />
+    <Content Include="BatchWiseTransactionDetailsForCBSChecker.aspx" />
+    <Content Include="CityCardsAccountManagement.aspx" />
+    <Content Include="CityCardsManagement.aspx" />
+    <Content Include="CityCardsCustomerManagement.aspx" />
+    <Content Include="AccountModifiedLog.aspx" />
+    <Content Include="CityCardsFailedList.aspx" />
+    <Content Include="CorporateUploadDebit.aspx" />
+    <Content Include="CustomClientMessage.aspx" />
+    <Content Include="CustomerEmailEdit.aspx" />
+    <Content Include="CustomerWiseReportMaker.aspx" />
+    <Content Include="CustomerWiseReport.aspx" />
+    <Content Include="CustomerWiseReportMaker_arc.aspx" />
+    <Content Include="CustomerWiseReport_arc.aspx" />
+    <Content Include="DDIReportForChecker.aspx" />
+    <Content Include="DDIReportByEntryDateForCSGViewer.aspx" />
+    <Content Include="DDIReportByEntryDateForChecker.aspx" />
+    <Content Include="DDIReportByEntryDate.aspx" />
+    <Content Include="EAdviceMaker.aspx" />
+    <Content Include="iBankingCBSReportChecker.aspx" />
+    <Content Include="iBankingCBSReportMaker.aspx" />
+    <Content Include="iBankingRejectedTransactionReportChecker.aspx" />
+    <Content Include="iBankingRejectedTransactionReportMaker.aspx" />
+    <Content Include="images\SCBLBankLogin.gif" />
+    <Content Include="InwardTransactionRejectedByCheckerForIF.aspx" />
+    <Content Include="LoginFlora.aspx" />
+    <Content Include="NonAckXMLFileList.aspx" />
+    <Content Include="EFTCSGReportViewer.aspx" />
+    <Content Include="iBankingOperatorChecker.aspx" />
+    <Content Include="iBankingOperatorMaker.aspx" />
+    <Content Include="ReinsertReturnMaker.aspx" />
+    <Content Include="SchedulerReportChekerExecutionDay.aspx" />
+    <Content Include="SchedulerReportMakerExecutionDay.aspx" />
+    <Content Include="SchedulerReportMaker.aspx" />
+    <Content Include="SchedulerReportChecker.aspx" />
+    <Content Include="SchedulerReportTransactionListForMaker.aspx" />
+    <Content Include="StandingOrderLogChecker.aspx" />
+    <Content Include="StandingOrderRejectedBatchList.aspx" />
+    <Content Include="StandingOrderTransactionEdit.aspx" />
+    <Content Include="StandingOrderEntryDebit.aspx" />
+    <Content Include="StandingOrderEntryCredit.aspx" />
+    <Content Include="InwardSearchCSG.aspx" />
+    <Content Include="modules\CSGReportViewerHeader.ascx" />
+    <Content Include="OutwardSearchCSG.aspx" />
+    <Content Include="SchedulerReportTransactionListForChecker.aspx" />
+    <Content Include="SuperAdminAuditUser.aspx" />
+    <Content Include="SuperAdminCheckerAuditUser.aspx" />
+    <Content Include="MasterUserCheckerKillSession.aspx" />
+    <Content Include="MasterUserKillSession.aspx" />
+    <Content Include="CustomerEmailChecker.aspx" />
+    <Content Include="CustomerEmail.aspx" />
+    <Content Include="images\png\Mail_Icon.png" />
+    <Content Include="SchedulerReportMakerOld.aspx" />
+    <Content Include="RFCSuccessReport.aspx" />
+    <Content Include="RegenerateTransactionByTraceNumber.aspx" />
+    <Content Include="TransactionReceiveCSVForUCB.aspx" />
+    <Content Include="FlatFileForReturnSentForSCBCards.aspx" />
+    <Content Include="FlatFilesForReturnReceivedCity.aspx" />
+    <Content Include="RetrieveReturnFromArchive.aspx" />
+    <Content Include="HoldStatusReport.aspx" />
+    <Content Include="GenerateXMLForCardsCity.aspx" />
+    <Content Include="SCBCardMapper.aspx" />
+    <Content Include="DetailSettlementReportForCards.aspx" />
+    <Content Include="FlatFileForTransactionReceivedForCards.aspx" />
+    <Content Include="FCUBSReport.aspx" />
+    <Content Include="EFTCheckerAuthorizerSpAdmin.aspx" />
+    <Content Include="StandingOrderTransactionListForChecker.aspx" />
+    <Content Include="StandingOrderBatchListChecker.aspx" />
+    <Content Include="InwardReturnRejectedByFCUBS.aspx" />
+    <Content Include="CreditFCUBSForEftDebitTXN.aspx" />
+    <Content Include="FlatFileForTransactionSentCity.aspx" />
+    <Content Include="InwardTransactionRejectedByFCUBS.aspx" />
+    <Content Include="SendIBSTransactionToCityCBS.aspx" />
+    <Content Include="InwardReturnModifierRFC.aspx" />
+    <Content Include="InwardReturnMakerRFC.aspx" />
+    <Content Include="TransactionSentStatusReport.aspx" />
+    <Content Include="UpdateWorkingDayOnFridaySaturday.aspx" />
+    <Content Include="PrintCustomerAdviceMaker.aspx" />
+    <Content Include="EFTCheckerAuthorizerReport.aspx" />
+    <Content Include="DashBoardReportCA.aspx" />
+    <Content Include="PrintCustomerAdviceCA.aspx" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Web References\CBLWebServiceReference\BlockCreditCardResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\CardTransactionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\CBLWebServices.wsdl" />
+    <None Include="Web References\CBLWebServiceReference\CreditCardAccountResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\CreditCardPaymentFromCASAResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\DebitCardAccountResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\DoInternetBillPaymentResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\DoMobileTopupResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\DoOtherBankShceduleTransactionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\DoOtherBankTransactionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetAccountDetailsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCardByContractResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCardCurrentStatementResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCardSummaryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCASAAccountsSummaryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCASADetailsStatementResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCASAMiniStatementResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetClientCardDetailsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetClientCardsByPhoneResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCreditCardBalancesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCreditCardDetailsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCreditLastStatementDetailsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCustomerCardDetailsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCustomerDebitCardsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetCustomerDetailsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetDebitCardAccountsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetFincleRateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetLastTransactionDetailsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetLoanAccountDetailsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetLoanAccountsSummaryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetLoanDetailsStatementResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetMultipleChequeStatusEnquiryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetMultipleChequeStatusResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetOtherBanksPayeeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetRepaymentScheduleResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetSingleChequeStatusResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetTDAccountsSummaryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetTermDepositAccountDetailsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetTermDepositDetailsStatementResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\GetTransactionListResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\ProcessVisaTransactionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\TransactionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CBLWebServiceReference\UpdateCustomerInfoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NrbIBReturn\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NrbIBReturn\Service.disco" />
+    <Content Include="ZoneWiseReportCA.aspx" />
+    <Content Include="UpdateSettlementDateCA.aspx" />
+    <Content Include="SettlementReportCA.aspx" />
+    <Content Include="DetailSettlementReportCA.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="ApprovedNOCChekcer.aspx" />
+    <Content Include="bin\EFTN.dll" />
+    <Content Include="bin\EFTN.pdb" />
+    <Content Include="ConsumerType.aspx" />
+    <Content Include="ConsumerCommonInfo.aspx" />
+    <Content Include="CorporateUploadCredit.aspx" />
+    <Content Include="CorToCor.aspx" />
+    <Content Include="CorToInd.aspx" />
+    <Content Include="DishonorSentFiles.aspx" />
+    <Content Include="EFTChecker.aspx" />
+    <Content Include="EFTCheckerTransactionSent.aspx" />
+    <Content Include="EFTDishonorRejectedForMaker.aspx" />
+    <Content Include="EFTDishonorSentChecker.aspx" />
+    <Content Include="EFTEditNOC.aspx" />
+    <Content Include="EFTEditReturnSent.aspx" />
+    <Content Include="EFTEditTransactionSent.aspx" />
+    <Content Include="EFTMaker.aspx" />
+    <Content Include="EFTNOCRejectedForMaker.aspx" />
+    <Content Include="EFTReturnRejectedForMaker.aspx" />
+    <Content Include="EFTTransactionRejectedForMaker.aspx" />
+    <Content Include="ExportContestedDishonorXML.aspx" />
+    <Content Include="ExportDishonor.aspx" />
+    <Content Include="ExportNOC.aspx" />
+    <Content Include="ExportReturn.aspx" />
+    <Content Include="ExportRNOC.aspx" />
+    <Content Include="ExportToCBS.aspx" />
+    <Content Include="FileWatcher.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="ImportAck.aspx" />
+    <Content Include="ImportDishonor.aspx" />
+    <Content Include="ImportFromCBS.aspx" />
+    <Content Include="ImportRNOC.aspx" />
+    <Content Include="includes\jquery.min.js" />
+    <Content Include="includes\MainMenu.css" />
+    <Content Include="includes\Mainmenu.js" />
+    <Content Include="includes\sitec.css" />
+    <Content Include="IndToCor.aspx" />
+    <Content Include="IndToInd.aspx" />
+    <Content Include="InwardDishonor.aspx" />
+    <Content Include="InwardReturnMaker.aspx" />
+    <Content Include="InwardSearch.aspx" />
+    <Content Include="InwardTransactionNOCChecker.aspx" />
+    <Content Include="InwardTransactionReturnChecker.aspx" />
+    <Content Include="InwardTransactionMaker.aspx" />
+    <Content Include="InwardTransactionManual.aspx" />
+    <Content Include="ListOfContestedRejectedByChecker.aspx" />
+    <Content Include="ListOfDishonorRejectedByChecker.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="LogOut.aspx" />
+    <Content Include="modules\CheckerHeader.ascx" />
+    <Content Include="modules\Header.ascx" />
+    <Content Include="modules\MakerHeader.ascx" />
+    <Content Include="NOCFiles.aspx" />
+    <Content Include="obj\Debug\EFTN.dll" />
+    <Content Include="obj\Debug\EFTN.pdb" />
+    <Content Include="obj\EFTN.csproj.FileList.txt" />
+    <Content Include="OutwardSearch.aspx" />
+    <Content Include="ReceivedNOCChecker.aspx" />
+    <Content Include="RejectedListOfApprovedReceivedNOC.aspx" />
+    <Content Include="ReturnFiles.aspx" />
+    <Content Include="RNOCFiles.aspx" />
+    <Content Include="RNOCofNOCChecker.aspx" />
+    <Content Include="RNOCofReceivedNOCRejectedByChecker.aspx" />
+    <Content Include="SettlementReport.aspx" />
+    <Content Include="StatusReport.aspx" />
+    <Content Include="TrancateEFTDatabase.aspx" />
+    <Content Include="TransactionSentFiles.aspx" />
+    <Content Include="TransSentVoucher.aspx" />
+    <Content Include="UpdateSettlementDate.aspx" />
+    <Content Include="UserManagement.aspx" />
+    <None Include="Web References\NrbIBReturn\Service.wsdl" />
+    <None Include="Web References\PBMServer\Service1.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminChecker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>AdminChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminChecker.aspx.designer.cs">
+      <DependentUpon>AdminChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvicePrintStatusCA.aspx.cs">
+      <DependentUpon>AdvicePrintStatusCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvicePrintStatusCA.aspx.designer.cs">
+      <DependentUpon>AdvicePrintStatusCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovedDishonor.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ApprovedDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovedDishonor.aspx.designer.cs">
+      <DependentUpon>ApprovedDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchWiseTransactionDetails.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>BatchWiseTransactionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchWiseTransactionDetails.aspx.designer.cs">
+      <DependentUpon>BatchWiseTransactionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BBReconciliataionReportCA.aspx.cs">
+      <DependentUpon>BBReconciliataionReportCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BBReconciliataionReportCA.aspx.designer.cs">
+      <DependentUpon>BBReconciliataionReportCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\ContestedDishonorXML.cs" />
+    <Compile Include="BLL\CityDebitAccountManager.cs" />
+    <Compile Include="BLL\CityCardManager.cs" />
+    <Compile Include="BLL\ExcelDataBulkEntryObject.cs" />
+    <Compile Include="BLL\DataManager.cs" />
+    <Compile Include="BLL\PassPolicyManager.cs" />
+    <Compile Include="BLL\TextFileGeneratorToUpload.cs" />
+    <Compile Include="BLL\FCUBSAccountStatusManager.cs" />
+    <Compile Include="BLL\TransactionSentXMLToTemp.cs" />
+    <Compile Include="BLL\EFTCSVDataEntryObjectForEXIM.cs" />
+    <Compile Include="BLL\FlatFileClientCity.cs" />
+    <Compile Include="BLL\FCUBSRTManager.cs" />
+    <Compile Include="BLL\RTServiceTxnXML.cs" />
+    <Compile Include="BLL\RTServiceAccountManager.cs" />
+    <Compile Include="BLL\ValidateExelFieldForStandingOrderSCB.cs" />
+    <Compile Include="BLL\ValidateExelFieldForStandingOrderNRB.cs" />
+    <Compile Include="BLL\ExcelDataCityDebitAccStatus.cs" />
+    <Compile Include="BLL\ValidateExelFieldForStandingOrderCity.cs" />
+    <Compile Include="BLL\ExcelDataBulkReturn.cs" />
+    <Compile Include="BLL\ExcelDataDDIAccStatus.cs" />
+    <Compile Include="BLL\RegenerateTransactionSentXML.cs" />
+    <Compile Include="BLL\PubaliTextDataEntryObject.cs" />
+    <Compile Include="BLL\DDIManager.cs" />
+    <Compile Include="BLL\ExcelForStandingOrder.cs" />
+    <Compile Include="BLL\FlatFileChargeClient.cs" />
+    <Compile Include="BLL\EFTChargeManager.cs" />
+    <Compile Include="BLL\PIBSManager.cs" />
+    <Compile Include="BLL\TransactionAcknowledgement.cs" />
+    <Compile Include="BLL\ItextSharpPageEventHandler.cs" />
+    <Compile Include="BLL\ValidateCSVFieldForEFT.cs" />
+    <Compile Include="BLL\ValidateCSVFieldForSCB.cs" />
+    <Compile Include="BLL\CsvReader.cs" />
+    <Compile Include="BLL\EFTCSVDataEntryObject.cs" />
+    <Compile Include="BLL\CryptorEngine.cs" />
+    <Compile Include="BLL\CsvSCBDataEntryObject.cs" />
+    <Compile Include="BLL\DelimitedTextReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\DishonoredReceivedXML.cs" />
+    <Compile Include="BLL\EFTApplicationRun.cs" />
+    <Compile Include="BLL\EFTCSVReader.cs" />
+    <Compile Include="BLL\ExcelDataBranch.cs" />
+    <Compile Include="BLL\FileIDModifierCalculator.cs" />
+    <Compile Include="BLL\ImportDelimitedFile.cs" />
+    <Compile Include="BLL\RNOCReceivedXML.cs" />
+    <Compile Include="BLL\RoutingNumberValidator.cs" />
+    <Compile Include="BLL\TextDataEntryObject.cs" />
+    <Compile Include="BLL\ValidateExelField.cs" />
+    <Compile Include="BLL\WSClient.cs" />
+    <Compile Include="Branches.aspx.cs">
+      <DependentUpon>Branches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Branches.aspx.designer.cs">
+      <DependentUpon>Branches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchMessages.aspx.cs">
+      <DependentUpon>BranchMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BranchMessages.aspx.designer.cs">
+      <DependentUpon>BranchMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchWiseSettlementReport.aspx.cs">
+      <DependentUpon>BranchWiseSettlementReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BranchWiseSettlementReport.aspx.designer.cs">
+      <DependentUpon>BranchWiseSettlementReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkTransactionListCsvFilterForBatch.aspx.cs">
+      <DependentUpon>BulkTransactionListCsvFilterForBatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkTransactionListCsvFilterForBatch.aspx.designer.cs">
+      <DependentUpon>BulkTransactionListCsvFilterForBatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkTransactionListCsvMovedForBatch.aspx.cs">
+      <DependentUpon>BulkTransactionListCsvMovedForBatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkTransactionListCsvMovedForBatch.aspx.designer.cs">
+      <DependentUpon>BulkTransactionListCsvMovedForBatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkTransactionListCsvSCB.aspx.cs">
+      <DependentUpon>BulkTransactionListCsvSCB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkTransactionListCsvSCB.aspx.designer.cs">
+      <DependentUpon>BulkTransactionListCsvSCB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CBSMisMatchReport.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CBSMisMatchReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CBSMisMatchReport.aspx.designer.cs">
+      <DependentUpon>CBSMisMatchReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeAdminCheckerPassword.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ChangeAdminCheckerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeAdminCheckerPassword.aspx.designer.cs">
+      <DependentUpon>ChangeAdminCheckerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeCheckerPassword.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ChangeCheckerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeCheckerPassword.aspx.designer.cs">
+      <DependentUpon>ChangeCheckerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeCSGUserPassword.aspx.cs">
+      <DependentUpon>ChangeCSGUserPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeCSGUserPassword.aspx.designer.cs">
+      <DependentUpon>ChangeCSGUserPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeMakerPassword.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ChangeMakerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeMakerPassword.aspx.designer.cs">
+      <DependentUpon>ChangeMakerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeUserPassword.aspx.cs">
+      <DependentUpon>ChangeUserPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeUserPassword.aspx.designer.cs">
+      <DependentUpon>ChangeUserPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckerBranches.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CheckerBranches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckerBranches.aspx.designer.cs">
+      <DependentUpon>CheckerBranches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckerUserManagement.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CheckerUserManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckerUserManagement.aspx.designer.cs">
+      <DependentUpon>CheckerUserManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="component\AccountEnquiryDB.cs" />
+    <Compile Include="component\AcknowledgementDB.cs" />
+    <Compile Include="component\AdditionalSummaryReportDB.cs" />
+    <Compile Include="component\ApprovedDishonorDB.cs" />
+    <Compile Include="component\ApprovedInwardTransactionDB.cs" />
+    <Compile Include="component\ArchiveDatabaseManageDB.cs" />
+    <Compile Include="component\BankDB.cs" />
+    <Compile Include="component\BanksDB.cs" />
+    <Compile Include="component\BranchWiseTransactionStatusDB.cs" />
+    <Compile Include="component\CardsReportDB.cs" />
+    <Compile Include="component\CBSMissMatchXLDB.cs" />
+    <Compile Include="component\CityRFCDB.cs" />
+    <Compile Include="component\ClientDB.cs" />
+    <Compile Include="component\ContestedBatchDB.cs" />
+    <Compile Include="component\ContestedDishonorDB.cs" />
+    <Compile Include="component\BACHBranchDB.cs" />
+    <Compile Include="component\BulkReturnDB.cs" />
+    <Compile Include="component\CityDebitAccountDB.cs" />
+    <Compile Include="component\CityIBSDB.cs" />
+    <Compile Include="component\CityCardsAccountDB.cs" />
+    <Compile Include="component\AccountModificatinoDB.cs" />
+    <Compile Include="component\EAdviceDB.cs" />
+    <Compile Include="component\EFTCsvScbBulkDB.cs" />
+    <Compile Include="component\ExcelEFTBulkDB.cs" />
+    <Compile Include="component\CustomerEmailDB.cs" />
+    <Compile Include="component\iBankingDB.cs" />
+    <Compile Include="component\NonAckFileListDB.cs" />
+    <Compile Include="component\TransactionReceiveForUCBCSVDB.cs" />
+    <Compile Include="component\FCUBSReportDB.cs" />
+    <Compile Include="component\FCUBSTransactionsentBatchDB.cs" />
+    <Compile Include="component\FlatFileCityDB.cs" />
+    <Compile Include="component\RTServiceDB.cs" />
+    <Compile Include="component\ReceivedReturnRFCDB.cs" />
+    <Compile Include="component\MessageDB.cs" />
+    <Compile Include="component\RegenerateOutwardTransactionDB.cs" />
+    <Compile Include="component\RejectedDebitTransactionDB.cs" />
+    <Compile Include="component\SCBCardMapperDB.cs" />
+    <Compile Include="component\SCBDDIDB.cs" />
+    <Compile Include="component\SignatureDB.cs" />
+    <Compile Include="component\StandingOrderDB.cs" />
+    <Compile Include="component\EFTChargeDB.cs" />
+    <Compile Include="component\EFTChargeReportDB.cs" />
+    <Compile Include="component\PIBSDB.cs" />
+    <Compile Include="component\SearchReceivedEDRDB.cs" />
+    <Compile Include="component\HUBCommunicationDB.cs" />
+    <Compile Include="component\FinacleDB.cs" />
+    <Compile Include="component\HolidayDB.cs" />
+    <Compile Include="component\CSVReportDB.cs" />
+    <Compile Include="component\DepartmentsDB.cs" />
+    <Compile Include="component\DetailSettlementReportDB.cs" />
+    <Compile Include="component\EBBSCheckerDishonorSentDB.cs" />
+    <Compile Include="component\EDRSentEBBSCheckerDB.cs" />
+    <Compile Include="component\EFTSecurityDB.cs" />
+    <Compile Include="component\GLAccountDB.cs" />
+    <Compile Include="component\InvalidItemDB.cs" />
+    <Compile Include="component\InwardSearchDB.cs" />
+    <Compile Include="component\ISOMessageDB.cs" />
+    <Compile Include="component\ItemCountDB.cs" />
+    <Compile Include="component\MICRDB.cs" />
+    <Compile Include="component\MICROracleDB.cs" />
+    <Compile Include="component\OutwardSearchDB.cs" />
+    <Compile Include="component\PrintCustomerAdviceDB.cs" />
+    <Compile Include="component\ReceivedDishonorDB.cs" />
+    <Compile Include="component\ReceivedRNOCDB.cs" />
+    <Compile Include="component\ReconcilationDB.cs" />
+    <Compile Include="component\ReportDB.cs" />
+    <Compile Include="component\RoleDB.cs" />
+    <Compile Include="component\SettlementDateDB.cs" />
+    <Compile Include="component\TrancateDatabase.cs" />
+    <Compile Include="component\TransactionManagerDB.cs" />
+    <Compile Include="component\TransactionReceivedForCards.cs" />
+    <Compile Include="component\TransactionSentDB.cs" />
+    <Compile Include="component\TransactionToCBSDB.cs" />
+    <Compile Include="component\TransactionXMLFileNameDB.cs" />
+    <Compile Include="component\UserHistoryDB.cs" />
+    <Compile Include="component\UtilityDB.cs" />
+    <Compile Include="component\XMLLogDB.cs" />
+    <Compile Include="component\ZoneDB.cs" />
+    <Compile Include="ContestedDishonor.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ContestedDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContestedDishonor.aspx.designer.cs">
+      <DependentUpon>ContestedDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContestedFiles.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ContestedFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContestedFiles.aspx.designer.cs">
+      <DependentUpon>ContestedFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovedInwardTransaction.aspx.cs">
+      <DependentUpon>ApprovedInwardTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovedInwardTransaction.aspx.designer.cs">
+      <DependentUpon>ApprovedInwardTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeReconciliatorPassword.aspx.cs">
+      <DependentUpon>ChangeReconciliatorPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeReconciliatorPassword.aspx.designer.cs">
+      <DependentUpon>ChangeReconciliatorPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchSentRejectedByChecker.aspx.cs">
+      <DependentUpon>BatchSentRejectedByChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchSentRejectedByChecker.aspx.designer.cs">
+      <DependentUpon>BatchSentRejectedByChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchSentVoucher.aspx.cs">
+      <DependentUpon>BatchSentVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchSentVoucher.aspx.designer.cs">
+      <DependentUpon>BatchSentVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkTransactionEdit.aspx.cs">
+      <DependentUpon>BulkTransactionEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkTransactionEdit.aspx.designer.cs">
+      <DependentUpon>BulkTransactionEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkTransactionList.aspx.cs">
+      <DependentUpon>BulkTransactionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkTransactionList.aspx.designer.cs">
+      <DependentUpon>BulkTransactionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeAuthorizerPassword.aspx.cs">
+      <DependentUpon>ChangeAuthorizerPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeAuthorizerPassword.aspx.designer.cs">
+      <DependentUpon>ChangeAuthorizerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeReportViewerPassword.aspx.cs">
+      <DependentUpon>ChangeReportViewerPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeReportViewerPassword.aspx.designer.cs">
+      <DependentUpon>ChangeReportViewerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchWiseSettlementReportViewer.aspx.cs">
+      <DependentUpon>BranchWiseSettlementReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BranchWiseSettlementReportViewer.aspx.designer.cs">
+      <DependentUpon>BranchWiseSettlementReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeClientPassword.aspx.cs">
+      <DependentUpon>ChangeClientPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeClientPassword.aspx.designer.cs">
+      <DependentUpon>ChangeClientPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdvicePrintStatus.aspx.cs">
+      <DependentUpon>AdvicePrintStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdvicePrintStatus.aspx.designer.cs">
+      <DependentUpon>AdvicePrintStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BACHBranchReport.aspx.cs">
+      <DependentUpon>BACHBranchReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BACHBranchReport.aspx.designer.cs">
+      <DependentUpon>BACHBranchReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalSummaryReport.aspx.cs">
+      <DependentUpon>AdditionalSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdditionalSummaryReport.aspx.designer.cs">
+      <DependentUpon>AdditionalSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchWiseMismatchedTransactionDetails.aspx.cs">
+      <DependentUpon>BatchWiseMismatchedTransactionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchWiseMismatchedTransactionDetails.aspx.designer.cs">
+      <DependentUpon>BatchWiseMismatchedTransactionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchWiseTransactionStatus.aspx.cs">
+      <DependentUpon>BranchWiseTransactionStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BranchWiseTransactionStatus.aspx.designer.cs">
+      <DependentUpon>BranchWiseTransactionStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChargeAccountManagement.aspx.cs">
+      <DependentUpon>ChargeAccountManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChargeAccountManagement.aspx.designer.cs">
+      <DependentUpon>ChargeAccountManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChargeAccountManagementChecker.aspx.cs">
+      <DependentUpon>ChargeAccountManagementChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChargeAccountManagementChecker.aspx.designer.cs">
+      <DependentUpon>ChargeAccountManagementChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityChargeAccountsManagement.aspx.cs">
+      <DependentUpon>CityChargeAccountsManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityChargeAccountsManagement.aspx.designer.cs">
+      <DependentUpon>CityChargeAccountsManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityChargeDepartmentManagement.aspx.cs">
+      <DependentUpon>CityChargeDepartmentManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityChargeDepartmentManagement.aspx.designer.cs">
+      <DependentUpon>CityChargeDepartmentManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityChargeCodeManagement.aspx.cs">
+      <DependentUpon>CityChargeCodeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityChargeCodeManagement.aspx.designer.cs">
+      <DependentUpon>CityChargeCodeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeMasterUserPassword.aspx.cs">
+      <DependentUpon>ChangeMasterUserPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeMasterUserPassword.aspx.designer.cs">
+      <DependentUpon>ChangeMasterUserPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeSuperAdminCheckerPassword.aspx.cs">
+      <DependentUpon>ChangeSuperAdminCheckerPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeSuperAdminCheckerPassword.aspx.designer.cs">
+      <DependentUpon>ChangeSuperAdminCheckerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkReturnUpload.aspx.cs">
+      <DependentUpon>BulkReturnUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkReturnUpload.aspx.designer.cs">
+      <DependentUpon>BulkReturnUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityDebitAccountManagement.aspx.cs">
+      <DependentUpon>CityDebitAccountManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityDebitAccountManagement.aspx.designer.cs">
+      <DependentUpon>CityDebitAccountManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchWiseSettlementReportCA.aspx.cs">
+      <DependentUpon>BranchWiseSettlementReportCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BranchWiseSettlementReportCA.aspx.designer.cs">
+      <DependentUpon>BranchWiseSettlementReportCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BACHBranchReportCA.aspx.cs">
+      <DependentUpon>BACHBranchReportCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BACHBranchReportCA.aspx.designer.cs">
+      <DependentUpon>BACHBranchReportCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="component\FCUBSRejectedTxnDB.cs" />
+    <Compile Include="CBSRejectedTXNManagement.aspx.cs">
+      <DependentUpon>CBSRejectedTXNManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CBSRejectedTXNManagement.aspx.designer.cs">
+      <DependentUpon>CBSRejectedTXNManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchWiseRejectedTransactionDetails.aspx.cs">
+      <DependentUpon>BatchWiseRejectedTransactionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchWiseRejectedTransactionDetails.aspx.designer.cs">
+      <DependentUpon>BatchWiseRejectedTransactionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchWiseDebitTransactionDetails.aspx.cs">
+      <DependentUpon>BatchWiseDebitTransactionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchWiseDebitTransactionDetails.aspx.designer.cs">
+      <DependentUpon>BatchWiseDebitTransactionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountEnquiry.aspx.cs">
+      <DependentUpon>AccountEnquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountEnquiry.aspx.designer.cs">
+      <DependentUpon>AccountEnquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchWiseTransactionDetailsForCBSChecker.aspx.cs">
+      <DependentUpon>BatchWiseTransactionDetailsForCBSChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchWiseTransactionDetailsForCBSChecker.aspx.designer.cs">
+      <DependentUpon>BatchWiseTransactionDetailsForCBSChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityCardsAccountManagement.aspx.cs">
+      <DependentUpon>CityCardsAccountManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityCardsAccountManagement.aspx.designer.cs">
+      <DependentUpon>CityCardsAccountManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityCardsManagement.aspx.cs">
+      <DependentUpon>CityCardsManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityCardsManagement.aspx.designer.cs">
+      <DependentUpon>CityCardsManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityCardsCustomerManagement.aspx.cs">
+      <DependentUpon>CityCardsCustomerManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityCardsCustomerManagement.aspx.designer.cs">
+      <DependentUpon>CityCardsCustomerManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountModifiedLog.aspx.cs">
+      <DependentUpon>AccountModifiedLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountModifiedLog.aspx.designer.cs">
+      <DependentUpon>AccountModifiedLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityCardsFailedList.aspx.cs">
+      <DependentUpon>CityCardsFailedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityCardsFailedList.aspx.designer.cs">
+      <DependentUpon>CityCardsFailedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateUploadDebit.aspx.cs">
+      <DependentUpon>CorporateUploadDebit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorporateUploadDebit.aspx.designer.cs">
+      <DependentUpon>CorporateUploadDebit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerEmailEdit.aspx.cs">
+      <DependentUpon>CustomerEmailEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerEmailEdit.aspx.designer.cs">
+      <DependentUpon>CustomerEmailEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWiseReportMaker.aspx.cs">
+      <DependentUpon>CustomerWiseReportMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerWiseReportMaker.aspx.designer.cs">
+      <DependentUpon>CustomerWiseReportMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWiseReport.aspx.cs">
+      <DependentUpon>CustomerWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerWiseReport.aspx.designer.cs">
+      <DependentUpon>CustomerWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWiseReportMaker_arc.aspx.cs">
+      <DependentUpon>CustomerWiseReportMaker_arc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerWiseReportMaker_arc.aspx.designer.cs">
+      <DependentUpon>CustomerWiseReportMaker_arc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWiseReport_arc.aspx.cs">
+      <DependentUpon>CustomerWiseReport_arc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerWiseReport_arc.aspx.designer.cs">
+      <DependentUpon>CustomerWiseReport_arc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDIReportForChecker.aspx.cs">
+      <DependentUpon>DDIReportForChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDIReportForChecker.aspx.designer.cs">
+      <DependentUpon>DDIReportForChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDIReportByEntryDateForCSGViewer.aspx.cs">
+      <DependentUpon>DDIReportByEntryDateForCSGViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDIReportByEntryDateForCSGViewer.aspx.designer.cs">
+      <DependentUpon>DDIReportByEntryDateForCSGViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDIReportByEntryDateForChecker.aspx.cs">
+      <DependentUpon>DDIReportByEntryDateForChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDIReportByEntryDateForChecker.aspx.designer.cs">
+      <DependentUpon>DDIReportByEntryDateForChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDIReportByEntryDate.aspx.cs">
+      <DependentUpon>DDIReportByEntryDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDIReportByEntryDate.aspx.designer.cs">
+      <DependentUpon>DDIReportByEntryDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EAdviceMaker.aspx.cs">
+      <DependentUpon>EAdviceMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EAdviceMaker.aspx.designer.cs">
+      <DependentUpon>EAdviceMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iBankingCBSReportChecker.aspx.cs">
+      <DependentUpon>iBankingCBSReportChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iBankingCBSReportChecker.aspx.designer.cs">
+      <DependentUpon>iBankingCBSReportChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iBankingCBSReportMaker.aspx.cs">
+      <DependentUpon>iBankingCBSReportMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iBankingCBSReportMaker.aspx.designer.cs">
+      <DependentUpon>iBankingCBSReportMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iBankingRejectedTransactionReportChecker.aspx.cs">
+      <DependentUpon>iBankingRejectedTransactionReportChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iBankingRejectedTransactionReportChecker.aspx.designer.cs">
+      <DependentUpon>iBankingRejectedTransactionReportChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iBankingRejectedTransactionReportMaker.aspx.cs">
+      <DependentUpon>iBankingRejectedTransactionReportMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iBankingRejectedTransactionReportMaker.aspx.designer.cs">
+      <DependentUpon>iBankingRejectedTransactionReportMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionRejectedByCheckerForIF.aspx.cs">
+      <DependentUpon>InwardTransactionRejectedByCheckerForIF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardTransactionRejectedByCheckerForIF.aspx.designer.cs">
+      <DependentUpon>InwardTransactionRejectedByCheckerForIF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFlora.aspx.cs">
+      <DependentUpon>LoginFlora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginFlora.aspx.designer.cs">
+      <DependentUpon>LoginFlora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NonAckXMLFileList.aspx.cs">
+      <DependentUpon>NonAckXMLFileList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NonAckXMLFileList.aspx.designer.cs">
+      <DependentUpon>NonAckXMLFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCSGReportViewer.aspx.cs">
+      <DependentUpon>EFTCSGReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTCSGReportViewer.aspx.designer.cs">
+      <DependentUpon>EFTCSGReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iBankingOperatorChecker.aspx.cs">
+      <DependentUpon>iBankingOperatorChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iBankingOperatorChecker.aspx.designer.cs">
+      <DependentUpon>iBankingOperatorChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iBankingOperatorMaker.aspx.cs">
+      <DependentUpon>iBankingOperatorMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iBankingOperatorMaker.aspx.designer.cs">
+      <DependentUpon>iBankingOperatorMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReinsertReturnMaker.aspx.cs">
+      <DependentUpon>ReinsertReturnMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReinsertReturnMaker.aspx.designer.cs">
+      <DependentUpon>ReinsertReturnMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAML\Saml.cs" />
+    <Compile Include="SAML\SamlConsume.cs" />
+    <Compile Include="SAML\SamlLogManager.cs" />
+    <Compile Include="SchedulerReportChekerExecutionDay.aspx.cs">
+      <DependentUpon>SchedulerReportChekerExecutionDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulerReportChekerExecutionDay.aspx.designer.cs">
+      <DependentUpon>SchedulerReportChekerExecutionDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulerReportMakerExecutionDay.aspx.cs">
+      <DependentUpon>SchedulerReportMakerExecutionDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulerReportMakerExecutionDay.aspx.designer.cs">
+      <DependentUpon>SchedulerReportMakerExecutionDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulerReportMaker.aspx.cs">
+      <DependentUpon>SchedulerReportMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulerReportMaker.aspx.designer.cs">
+      <DependentUpon>SchedulerReportMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulerReportChecker.aspx.cs">
+      <DependentUpon>SchedulerReportChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulerReportChecker.aspx.designer.cs">
+      <DependentUpon>SchedulerReportChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulerReportTransactionListForMaker.aspx.cs">
+      <DependentUpon>SchedulerReportTransactionListForMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulerReportTransactionListForMaker.aspx.designer.cs">
+      <DependentUpon>SchedulerReportTransactionListForMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderLogChecker.aspx.cs">
+      <DependentUpon>StandingOrderLogChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderLogChecker.aspx.designer.cs">
+      <DependentUpon>StandingOrderLogChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderRejectedBatchList.aspx.cs">
+      <DependentUpon>StandingOrderRejectedBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderRejectedBatchList.aspx.designer.cs">
+      <DependentUpon>StandingOrderRejectedBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderTransactionEdit.aspx.cs">
+      <DependentUpon>StandingOrderTransactionEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderTransactionEdit.aspx.designer.cs">
+      <DependentUpon>StandingOrderTransactionEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderEntryDebit.aspx.cs">
+      <DependentUpon>StandingOrderEntryDebit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderEntryDebit.aspx.designer.cs">
+      <DependentUpon>StandingOrderEntryDebit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderEntryCredit.aspx.cs">
+      <DependentUpon>StandingOrderEntryCredit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderEntryCredit.aspx.designer.cs">
+      <DependentUpon>StandingOrderEntryCredit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardSearchCSG.aspx.cs">
+      <DependentUpon>InwardSearchCSG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardSearchCSG.aspx.designer.cs">
+      <DependentUpon>InwardSearchCSG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\CSGReportViewerHeader.ascx.cs">
+      <DependentUpon>CSGReportViewerHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\CSGReportViewerHeader.ascx.designer.cs">
+      <DependentUpon>CSGReportViewerHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutwardSearchCSG.aspx.cs">
+      <DependentUpon>OutwardSearchCSG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutwardSearchCSG.aspx.designer.cs">
+      <DependentUpon>OutwardSearchCSG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulerReportTransactionListForChecker.aspx.cs">
+      <DependentUpon>SchedulerReportTransactionListForChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulerReportTransactionListForChecker.aspx.designer.cs">
+      <DependentUpon>SchedulerReportTransactionListForChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuperAdminAuditUser.aspx.cs">
+      <DependentUpon>SuperAdminAuditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuperAdminAuditUser.aspx.designer.cs">
+      <DependentUpon>SuperAdminAuditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuperAdminCheckerAuditUser.aspx.cs">
+      <DependentUpon>SuperAdminCheckerAuditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuperAdminCheckerAuditUser.aspx.designer.cs">
+      <DependentUpon>SuperAdminCheckerAuditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterUserCheckerKillSession.aspx.cs">
+      <DependentUpon>MasterUserCheckerKillSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterUserCheckerKillSession.aspx.designer.cs">
+      <DependentUpon>MasterUserCheckerKillSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterUserKillSession.aspx.cs">
+      <DependentUpon>MasterUserKillSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterUserKillSession.aspx.designer.cs">
+      <DependentUpon>MasterUserKillSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerEmailChecker.aspx.cs">
+      <DependentUpon>CustomerEmailChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerEmailChecker.aspx.designer.cs">
+      <DependentUpon>CustomerEmailChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerEmail.aspx.cs">
+      <DependentUpon>CustomerEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerEmail.aspx.designer.cs">
+      <DependentUpon>CustomerEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulerReportMakerOld.aspx.cs">
+      <DependentUpon>SchedulerReportMakerOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulerReportMakerOld.aspx.designer.cs">
+      <DependentUpon>SchedulerReportMakerOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RFCSuccessReport.aspx.cs">
+      <DependentUpon>RFCSuccessReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RFCSuccessReport.aspx.designer.cs">
+      <DependentUpon>RFCSuccessReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegenerateTransactionByTraceNumber.aspx.cs">
+      <DependentUpon>RegenerateTransactionByTraceNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegenerateTransactionByTraceNumber.aspx.designer.cs">
+      <DependentUpon>RegenerateTransactionByTraceNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionReceiveCSVForUCB.aspx.cs">
+      <DependentUpon>TransactionReceiveCSVForUCB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransactionReceiveCSVForUCB.aspx.designer.cs">
+      <DependentUpon>TransactionReceiveCSVForUCB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFileForReturnSentForSCBCards.aspx.cs">
+      <DependentUpon>FlatFileForReturnSentForSCBCards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFileForReturnSentForSCBCards.aspx.designer.cs">
+      <DependentUpon>FlatFileForReturnSentForSCBCards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFilesForReturnReceivedCity.aspx.cs">
+      <DependentUpon>FlatFilesForReturnReceivedCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFilesForReturnReceivedCity.aspx.designer.cs">
+      <DependentUpon>FlatFilesForReturnReceivedCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RetrieveReturnFromArchive.aspx.cs">
+      <DependentUpon>RetrieveReturnFromArchive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RetrieveReturnFromArchive.aspx.designer.cs">
+      <DependentUpon>RetrieveReturnFromArchive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HoldStatusReport.aspx.cs">
+      <DependentUpon>HoldStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HoldStatusReport.aspx.designer.cs">
+      <DependentUpon>HoldStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateXMLForCardsCity.aspx.cs">
+      <DependentUpon>GenerateXMLForCardsCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerateXMLForCardsCity.aspx.designer.cs">
+      <DependentUpon>GenerateXMLForCardsCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCBCardMapper.aspx.cs">
+      <DependentUpon>SCBCardMapper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCBCardMapper.aspx.designer.cs">
+      <DependentUpon>SCBCardMapper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSettlementReportForCards.aspx.cs">
+      <DependentUpon>DetailSettlementReportForCards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSettlementReportForCards.aspx.designer.cs">
+      <DependentUpon>DetailSettlementReportForCards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFileForTransactionReceivedForCards.aspx.cs">
+      <DependentUpon>FlatFileForTransactionReceivedForCards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFileForTransactionReceivedForCards.aspx.designer.cs">
+      <DependentUpon>FlatFileForTransactionReceivedForCards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FCUBSReport.aspx.cs">
+      <DependentUpon>FCUBSReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FCUBSReport.aspx.designer.cs">
+      <DependentUpon>FCUBSReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerAuthorizerSpAdmin.aspx.cs">
+      <DependentUpon>EFTCheckerAuthorizerSpAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTCheckerAuthorizerSpAdmin.aspx.designer.cs">
+      <DependentUpon>EFTCheckerAuthorizerSpAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderTransactionListForChecker.aspx.cs">
+      <DependentUpon>StandingOrderTransactionListForChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderTransactionListForChecker.aspx.designer.cs">
+      <DependentUpon>StandingOrderTransactionListForChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderBatchListChecker.aspx.cs">
+      <DependentUpon>StandingOrderBatchListChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderBatchListChecker.aspx.designer.cs">
+      <DependentUpon>StandingOrderBatchListChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnRejectedByFCUBS.aspx.cs">
+      <DependentUpon>InwardReturnRejectedByFCUBS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardReturnRejectedByFCUBS.aspx.designer.cs">
+      <DependentUpon>InwardReturnRejectedByFCUBS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditFCUBSForEftDebitTXN.aspx.cs">
+      <DependentUpon>CreditFCUBSForEftDebitTXN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditFCUBSForEftDebitTXN.aspx.designer.cs">
+      <DependentUpon>CreditFCUBSForEftDebitTXN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSentCity.aspx.cs">
+      <DependentUpon>FlatFileForTransactionSentCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSentCity.aspx.designer.cs">
+      <DependentUpon>FlatFileForTransactionSentCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionRejectedByFCUBS.aspx.cs">
+      <DependentUpon>InwardTransactionRejectedByFCUBS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardTransactionRejectedByFCUBS.aspx.designer.cs">
+      <DependentUpon>InwardTransactionRejectedByFCUBS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendIBSTransactionToCityCBS.aspx.cs">
+      <DependentUpon>SendIBSTransactionToCityCBS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendIBSTransactionToCityCBS.aspx.designer.cs">
+      <DependentUpon>SendIBSTransactionToCityCBS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnModifierRFC.aspx.cs">
+      <DependentUpon>InwardReturnModifierRFC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardReturnModifierRFC.aspx.designer.cs">
+      <DependentUpon>InwardReturnModifierRFC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnMakerRFC.aspx.cs">
+      <DependentUpon>InwardReturnMakerRFC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardReturnMakerRFC.aspx.designer.cs">
+      <DependentUpon>InwardReturnMakerRFC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionSentStatusReport.aspx.cs">
+      <DependentUpon>TransactionSentStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransactionSentStatusReport.aspx.designer.cs">
+      <DependentUpon>TransactionSentStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWorkingDayOnFridaySaturday.aspx.cs">
+      <DependentUpon>UpdateWorkingDayOnFridaySaturday.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateWorkingDayOnFridaySaturday.aspx.designer.cs">
+      <DependentUpon>UpdateWorkingDayOnFridaySaturday.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCustomerAdviceMaker.aspx.cs">
+      <DependentUpon>PrintCustomerAdviceMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintCustomerAdviceMaker.aspx.designer.cs">
+      <DependentUpon>PrintCustomerAdviceMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerAuthorizerReport.aspx.cs">
+      <DependentUpon>EFTCheckerAuthorizerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTCheckerAuthorizerReport.aspx.designer.cs">
+      <DependentUpon>EFTCheckerAuthorizerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoardReportCA.aspx.cs">
+      <DependentUpon>DashBoardReportCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoardReportCA.aspx.designer.cs">
+      <DependentUpon>DashBoardReportCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCustomerAdviceCA.aspx.cs">
+      <DependentUpon>PrintCustomerAdviceCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintCustomerAdviceCA.aspx.designer.cs">
+      <DependentUpon>PrintCustomerAdviceCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\OriginalBankCode.cs" />
+    <Compile Include="Utility\StandingOrderActiveStatus.cs" />
+    <Compile Include="Web References\CBLWebServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NrbIBReturn\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="ZoneWiseReportCA.aspx.cs">
+      <DependentUpon>ZoneWiseReportCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZoneWiseReportCA.aspx.designer.cs">
+      <DependentUpon>ZoneWiseReportCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSettlementDateCA.aspx.cs">
+      <DependentUpon>UpdateSettlementDateCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateSettlementDateCA.aspx.designer.cs">
+      <DependentUpon>UpdateSettlementDateCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SettlementReportCA.aspx.cs">
+      <DependentUpon>SettlementReportCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SettlementReportCA.aspx.designer.cs">
+      <DependentUpon>SettlementReportCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSettlementReportCA.aspx.cs">
+      <DependentUpon>DetailSettlementReportCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSettlementReportCA.aspx.designer.cs">
+      <DependentUpon>DetailSettlementReportCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RejectedDebitTransactionReport.aspx.cs">
+      <DependentUpon>RejectedDebitTransactionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RejectedDebitTransactionReport.aspx.designer.cs">
+      <DependentUpon>RejectedDebitTransactionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDIAccountMgtChecker.aspx.cs">
+      <DependentUpon>DDIAccountMgtChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDIAccountMgtChecker.aspx.designer.cs">
+      <DependentUpon>DDIAccountMgtChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDIAccountManagement.aspx.cs">
+      <DependentUpon>DDIAccountManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDIAccountManagement.aspx.designer.cs">
+      <DependentUpon>DDIAccountManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignatorManagement.aspx.cs">
+      <DependentUpon>SignatorManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignatorManagement.aspx.designer.cs">
+      <DependentUpon>SignatorManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDIBatchDetails.aspx.cs">
+      <DependentUpon>DDIBatchDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDIBatchDetails.aspx.designer.cs">
+      <DependentUpon>DDIBatchDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegenerateOutwardTransactionChecker.aspx.cs">
+      <DependentUpon>RegenerateOutwardTransactionChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegenerateOutwardTransactionChecker.aspx.designer.cs">
+      <DependentUpon>RegenerateOutwardTransactionChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuperAdminCheckerUserManagement.aspx.cs">
+      <DependentUpon>SuperAdminCheckerUserManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuperAdminCheckerUserManagement.aspx.designer.cs">
+      <DependentUpon>SuperAdminCheckerUserManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetMasterPassword.aspx.cs">
+      <DependentUpon>ResetMasterPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetMasterPassword.aspx.designer.cs">
+      <DependentUpon>ResetMasterPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\SuperAdminCheckerHeader.ascx.cs">
+      <DependentUpon>SuperAdminCheckerHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\SuperAdminCheckerHeader.ascx.designer.cs">
+      <DependentUpon>SuperAdminCheckerHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SuperAdminChecker.aspx.cs">
+      <DependentUpon>SuperAdminChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuperAdminChecker.aspx.designer.cs">
+      <DependentUpon>SuperAdminChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterUserManagement.aspx.cs">
+      <DependentUpon>MasterUserManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterUserManagement.aspx.designer.cs">
+      <DependentUpon>MasterUserManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\SuperAdminHeader.ascx.cs">
+      <DependentUpon>SuperAdminHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\SuperAdminHeader.ascx.designer.cs">
+      <DependentUpon>SuperAdminHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SuperAdmin.aspx.cs">
+      <DependentUpon>SuperAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuperAdmin.aspx.designer.cs">
+      <DependentUpon>SuperAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionReturnRecheck.aspx.cs">
+      <DependentUpon>InwardTransactionReturnRecheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardTransactionReturnRecheck.aspx.designer.cs">
+      <DependentUpon>InwardTransactionReturnRecheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegenerateOutwardTransaction.aspx.cs">
+      <DependentUpon>RegenerateOutwardTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegenerateOutwardTransaction.aspx.designer.cs">
+      <DependentUpon>RegenerateOutwardTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDIReport.aspx.cs">
+      <DependentUpon>DDIReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDIReport.aspx.designer.cs">
+      <DependentUpon>DDIReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DDITransactionManagement.aspx.cs">
+      <DependentUpon>DDITransactionManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDITransactionManagement.aspx.designer.cs">
+      <DependentUpon>DDITransactionManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditMessage.aspx.cs">
+      <DependentUpon>EditMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditMessage.aspx.designer.cs">
+      <DependentUpon>EditMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.aspx.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Messages.aspx.designer.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\CommonHeader.ascx.cs">
+      <DependentUpon>CommonHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\CommonHeader.ascx.designer.cs">
+      <DependentUpon>CommonHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderTransactionList.aspx.cs">
+      <DependentUpon>StandingOrderTransactionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderTransactionList.aspx.designer.cs">
+      <DependentUpon>StandingOrderTransactionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderBatchList.aspx.cs">
+      <DependentUpon>StandingOrderBatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderBatchList.aspx.designer.cs">
+      <DependentUpon>StandingOrderBatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderManagement.aspx.cs">
+      <DependentUpon>StandingOrderManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderManagement.aspx.designer.cs">
+      <DependentUpon>StandingOrderManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandingOrderUpload.aspx.cs">
+      <DependentUpon>StandingOrderUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandingOrderUpload.aspx.designer.cs">
+      <DependentUpon>StandingOrderUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSettlementRptForCharges.aspx.cs">
+      <DependentUpon>DetailSettlementRptForCharges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSettlementRptForCharges.aspx.designer.cs">
+      <DependentUpon>DetailSettlementRptForCharges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardSearchForAdmin.aspx.cs">
+      <DependentUpon>InwardSearchForAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardSearchForAdmin.aspx.designer.cs">
+      <DependentUpon>InwardSearchForAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTChargeManagementCity.aspx.cs">
+      <DependentUpon>EFTChargeManagementCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTChargeManagementCity.aspx.designer.cs">
+      <DependentUpon>EFTChargeManagementCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSentChargeToHUB.aspx.cs">
+      <DependentUpon>FlatFileForTransactionSentChargeToHUB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSentChargeToHUB.aspx.designer.cs">
+      <DependentUpon>FlatFileForTransactionSentChargeToHUB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MICRAccountManagementForChargeChecker.aspx.cs">
+      <DependentUpon>MICRAccountManagementForChargeChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MICRAccountManagementForChargeChecker.aspx.designer.cs">
+      <DependentUpon>MICRAccountManagementForChargeChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MICRAccountManagementForCharge.aspx.cs">
+      <DependentUpon>MICRAccountManagementForCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MICRAccountManagementForCharge.aspx.designer.cs">
+      <DependentUpon>MICRAccountManagementForCharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTChargeReportAccountWise.aspx.cs">
+      <DependentUpon>EFTChargeReportAccountWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTChargeReportAccountWise.aspx.designer.cs">
+      <DependentUpon>EFTChargeReportAccountWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTChargeReportMonthWise.aspx.cs">
+      <DependentUpon>EFTChargeReportMonthWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTChargeReportMonthWise.aspx.designer.cs">
+      <DependentUpon>EFTChargeReportMonthWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTChargeReportDateWise.aspx.cs">
+      <DependentUpon>EFTChargeReportDateWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTChargeReportDateWise.aspx.designer.cs">
+      <DependentUpon>EFTChargeReportDateWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTChargeReport.aspx.cs">
+      <DependentUpon>EFTChargeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTChargeReport.aspx.designer.cs">
+      <DependentUpon>EFTChargeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCodeManagementChecker.aspx.cs">
+      <DependentUpon>ProductCodeManagementChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCodeManagementChecker.aspx.designer.cs">
+      <DependentUpon>ProductCodeManagementChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SegmentCodeManagementChecker.aspx.cs">
+      <DependentUpon>SegmentCodeManagementChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SegmentCodeManagementChecker.aspx.designer.cs">
+      <DependentUpon>SegmentCodeManagementChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterCodeManagementChecker.aspx.cs">
+      <DependentUpon>MasterCodeManagementChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterCodeManagementChecker.aspx.designer.cs">
+      <DependentUpon>MasterCodeManagementChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTChargeManagementChecker.aspx.cs">
+      <DependentUpon>EFTChargeManagementChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTChargeManagementChecker.aspx.designer.cs">
+      <DependentUpon>EFTChargeManagementChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCodeManagement.aspx.cs">
+      <DependentUpon>ProductCodeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCodeManagement.aspx.designer.cs">
+      <DependentUpon>ProductCodeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SegmentCodeManagement.aspx.cs">
+      <DependentUpon>SegmentCodeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SegmentCodeManagement.aspx.designer.cs">
+      <DependentUpon>SegmentCodeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterCodeManagement.aspx.cs">
+      <DependentUpon>MasterCodeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterCodeManagement.aspx.designer.cs">
+      <DependentUpon>MasterCodeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTChargeManagement.aspx.cs">
+      <DependentUpon>EFTChargeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTChargeManagement.aspx.designer.cs">
+      <DependentUpon>EFTChargeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSentCharge.aspx.cs">
+      <DependentUpon>FlatFileForTransactionSentCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSentCharge.aspx.designer.cs">
+      <DependentUpon>FlatFileForTransactionSentCharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManager.aspx.cs">
+      <DependentUpon>TransactionManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransactionManager.aspx.designer.cs">
+      <DependentUpon>TransactionManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTDataTransferToPIBS.aspx.cs">
+      <DependentUpon>EFTDataTransferToPIBS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTDataTransferToPIBS.aspx.designer.cs">
+      <DependentUpon>EFTDataTransferToPIBS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorReport.aspx.cs">
+      <DependentUpon>MonitorReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonitorReport.aspx.designer.cs">
+      <DependentUpon>MonitorReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSettlementReportAck.aspx.cs">
+      <DependentUpon>DetailSettlementReportAck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSettlementReportAck.aspx.designer.cs">
+      <DependentUpon>DetailSettlementReportAck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFilesForCSVRejection.aspx.cs">
+      <DependentUpon>FlatFilesForCSVRejection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFilesForCSVRejection.aspx.designer.cs">
+      <DependentUpon>FlatFilesForCSVRejection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSVRejectionReport.aspx.cs">
+      <DependentUpon>CSVRejectionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSVRejectionReport.aspx.designer.cs">
+      <DependentUpon>CSVRejectionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelUploadForCBSMissMatchCheck.aspx.cs">
+      <DependentUpon>ExcelUploadForCBSMissMatchCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelUploadForCBSMissMatchCheck.aspx.designer.cs">
+      <DependentUpon>ExcelUploadForCBSMissMatchCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\AdminChecker.ascx.designer.cs">
+      <DependentUpon>AdminChecker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\CheckerAuthorizer.ascx.designer.cs">
+      <DependentUpon>CheckerAuthorizer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\ReconciliatorHeader.ascx.designer.cs">
+      <DependentUpon>ReconciliatorHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInactiveBranch.aspx.cs">
+      <DependentUpon>UpdateInactiveBranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateInactiveBranch.aspx.designer.cs">
+      <DependentUpon>UpdateInactiveBranch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveTransactionWithInvalidRoutingNo.aspx.cs">
+      <DependentUpon>RemoveTransactionWithInvalidRoutingNo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveTransactionWithInvalidRoutingNo.aspx.designer.cs">
+      <DependentUpon>RemoveTransactionWithInvalidRoutingNo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFilesForTransactionReceivedToHUB.aspx.cs">
+      <DependentUpon>FlatFilesForTransactionReceivedToHUB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFilesForTransactionReceivedToHUB.aspx.designer.cs">
+      <DependentUpon>FlatFilesForTransactionReceivedToHUB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFilesForReturnReceivedToHUB.aspx.cs">
+      <DependentUpon>FlatFilesForReturnReceivedToHUB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFilesForReturnReceivedToHUB.aspx.designer.cs">
+      <DependentUpon>FlatFilesForReturnReceivedToHUB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFileUpdloadForTransactionSent.aspx.cs">
+      <DependentUpon>FlatFileUpdloadForTransactionSent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFileUpdloadForTransactionSent.aspx.designer.cs">
+      <DependentUpon>FlatFileUpdloadForTransactionSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSentToHUB.aspx.cs">
+      <DependentUpon>FlatFileForTransactionSentToHUB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSentToHUB.aspx.designer.cs">
+      <DependentUpon>FlatFileForTransactionSentToHUB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionStatusReport.aspx.cs">
+      <DependentUpon>InwardTransactionStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardTransactionStatusReport.aspx.designer.cs">
+      <DependentUpon>InwardTransactionStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutwardDebitSummaryReport.aspx.cs">
+      <DependentUpon>OutwardDebitSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutwardDebitSummaryReport.aspx.designer.cs">
+      <DependentUpon>OutwardDebitSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutwardCreditSummaryReport.aspx.cs">
+      <DependentUpon>OutwardCreditSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutwardCreditSummaryReport.aspx.designer.cs">
+      <DependentUpon>OutwardCreditSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardDebitSummaryReport.aspx.cs">
+      <DependentUpon>InwardDebitSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardDebitSummaryReport.aspx.designer.cs">
+      <DependentUpon>InwardDebitSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardCreditSummaryReport.aspx.cs">
+      <DependentUpon>InwardCreditSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardCreditSummaryReport.aspx.designer.cs">
+      <DependentUpon>InwardCreditSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInactiveBranch6786.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UpdateInactiveBranch6786.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInactiveBranch6786.aspx.designer.cs">
+      <DependentUpon>UpdateInactiveBranch6786.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\NumberToWordConverter.cs" />
+    <Compile Include="Utility\SCBCSVDataObject.cs" />
+    <Compile Include="Utility\HSBCNamingConvension.cs" />
+    <Compile Include="Utility\SpecialCharacterRemover.cs" />
+    <Compile Include="Utility\StandingOrderTransactionFrequency.cs" />
+    <Compile Include="ZoneWiseReport.aspx.cs">
+      <DependentUpon>ZoneWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZoneWiseReport.aspx.designer.cs">
+      <DependentUpon>ZoneWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCustomerAdvice.aspx.cs">
+      <DependentUpon>PrintCustomerAdvice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintCustomerAdvice.aspx.designer.cs">
+      <DependentUpon>PrintCustomerAdvice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentManagement.aspx.cs">
+      <DependentUpon>DepartmentManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentManagement.aspx.designer.cs">
+      <DependentUpon>DepartmentManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoardReport.aspx.cs">
+      <DependentUpon>DashBoardReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoardReport.aspx.designer.cs">
+      <DependentUpon>DashBoardReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFilesForReturnReceived.aspx.cs">
+      <DependentUpon>FlatFilesForReturnReceived.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFilesForReturnReceived.aspx.designer.cs">
+      <DependentUpon>FlatFilesForReturnReceived.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinacleTransactionReceivedStatus.aspx.cs">
+      <DependentUpon>FinacleTransactionReceivedStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinacleTransactionReceivedStatus.aspx.designer.cs">
+      <DependentUpon>FinacleTransactionReceivedStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinacleTransactionReceivedSynchronizer.aspx.cs">
+      <DependentUpon>FinacleTransactionReceivedSynchronizer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinacleTransactionReceivedSynchronizer.aspx.designer.cs">
+      <DependentUpon>FinacleTransactionReceivedSynchronizer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBranches.aspx.cs">
+      <DependentUpon>SearchBranches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchBranches.aspx.designer.cs">
+      <DependentUpon>SearchBranches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinacleTransactionStatus.aspx.cs">
+      <DependentUpon>FinacleTransactionStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinacleTransactionStatus.aspx.designer.cs">
+      <DependentUpon>FinacleTransactionStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSettlementReportForClient.aspx.cs">
+      <DependentUpon>DetailSettlementReportForClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSettlementReportForClient.aspx.designer.cs">
+      <DependentUpon>DetailSettlementReportForClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\ClientHeader.ascx.cs">
+      <DependentUpon>ClientHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\ClientHeader.ascx.designer.cs">
+      <DependentUpon>ClientHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutwardBulkFromReportViewer.aspx.cs">
+      <DependentUpon>OutwardBulkFromReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutwardBulkFromReportViewer.aspx.designer.cs">
+      <DependentUpon>OutwardBulkFromReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSVReportViewer.aspx.cs">
+      <DependentUpon>CSVReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSVReportViewer.aspx.designer.cs">
+      <DependentUpon>CSVReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnReportByEffectiveEntryDateViewer.aspx.cs">
+      <DependentUpon>InwardReturnReportByEffectiveEntryDateViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardReturnReportByEffectiveEntryDateViewer.aspx.designer.cs">
+      <DependentUpon>InwardReturnReportByEffectiveEntryDateViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakerCheckerLisitingReportViewer.aspx.cs">
+      <DependentUpon>MakerCheckerLisitingReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakerCheckerLisitingReportViewer.aspx.designer.cs">
+      <DependentUpon>MakerCheckerLisitingReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatusReportViewer.aspx.cs">
+      <DependentUpon>StatusReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatusReportViewer.aspx.designer.cs">
+      <DependentUpon>StatusReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SettlementReportViewer.aspx.cs">
+      <DependentUpon>SettlementReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SettlementReportViewer.aspx.designer.cs">
+      <DependentUpon>SettlementReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSettlementReportViewer.aspx.cs">
+      <DependentUpon>DetailSettlementReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSettlementReportViewer.aspx.designer.cs">
+      <DependentUpon>DetailSettlementReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTReportViewer.aspx.cs">
+      <DependentUpon>EFTReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTReportViewer.aspx.designer.cs">
+      <DependentUpon>EFTReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinacleSynchronizer.aspx.cs">
+      <DependentUpon>FinacleSynchronizer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinacleSynchronizer.aspx.designer.cs">
+      <DependentUpon>FinacleSynchronizer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\ReportViewerHeader.ascx.cs">
+      <DependentUpon>ReportViewerHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\ReportViewerHeader.ascx.designer.cs">
+      <DependentUpon>ReportViewerHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateHolidayCalendarMaker.aspx.cs">
+      <DependentUpon>UpdateHolidayCalendarMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateHolidayCalendarMaker.aspx.designer.cs">
+      <DependentUpon>UpdateHolidayCalendarMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateHolidayCalendar.aspx.cs">
+      <DependentUpon>UpdateHolidayCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateHolidayCalendar.aspx.designer.cs">
+      <DependentUpon>UpdateHolidayCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerAuthorizerAdmin.aspx.cs">
+      <DependentUpon>EFTCheckerAuthorizerAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTCheckerAuthorizerAdmin.aspx.designer.cs">
+      <DependentUpon>EFTCheckerAuthorizerAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSent.aspx.cs">
+      <DependentUpon>FlatFileForTransactionSent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatFileForTransactionSent.aspx.designer.cs">
+      <DependentUpon>FlatFileForTransactionSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSVNonBDTReport.aspx.cs">
+      <DependentUpon>CSVNonBDTReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSVNonBDTReport.aspx.designer.cs">
+      <DependentUpon>CSVNonBDTReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSVBDTReport.aspx.cs">
+      <DependentUpon>CSVBDTReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSVBDTReport.aspx.designer.cs">
+      <DependentUpon>CSVBDTReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSVReport.aspx.cs">
+      <DependentUpon>CSVReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSVReport.aspx.designer.cs">
+      <DependentUpon>CSVReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnReportByEffectiveEntryDate.aspx.cs">
+      <DependentUpon>InwardReturnReportByEffectiveEntryDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardReturnReportByEffectiveEntryDate.aspx.designer.cs">
+      <DependentUpon>InwardReturnReportByEffectiveEntryDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakerCheckerLisitingReport.aspx.cs">
+      <DependentUpon>MakerCheckerLisitingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakerCheckerLisitingReport.aspx.designer.cs">
+      <DependentUpon>MakerCheckerLisitingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\CheckerAuthorizer.ascx.cs">
+      <DependentUpon>CheckerAuthorizer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutwardBulkFromReport.aspx.cs">
+      <DependentUpon>OutwardBulkFromReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutwardBulkFromReport.aspx.designer.cs">
+      <DependentUpon>OutwardBulkFromReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutwardBulkTransactionDetails.aspx.cs">
+      <DependentUpon>OutwardBulkTransactionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutwardBulkTransactionDetails.aspx.designer.cs">
+      <DependentUpon>OutwardBulkTransactionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TotalTransaction.aspx.cs">
+      <DependentUpon>TotalTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalTransaction.aspx.designer.cs">
+      <DependentUpon>TotalTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardSearchForChecker.aspx.cs">
+      <DependentUpon>InwardSearchForChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardSearchForChecker.aspx.designer.cs">
+      <DependentUpon>InwardSearchForChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutwardSearchForChecker.aspx.cs">
+      <DependentUpon>OutwardSearchForChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutwardSearchForChecker.aspx.designer.cs">
+      <DependentUpon>OutwardSearchForChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateGLAccountChecker.aspx.cs">
+      <DependentUpon>UpdateGLAccountChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateGLAccountChecker.aspx.designer.cs">
+      <DependentUpon>UpdateGLAccountChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateGLAccount.aspx.cs">
+      <DependentUpon>UpdateGLAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateGLAccount.aspx.designer.cs">
+      <DependentUpon>UpdateGLAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTMakerReport.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTMakerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTMakerReport.aspx.designer.cs">
+      <DependentUpon>EFTMakerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MismatchedInwardReturn.aspx.cs">
+      <DependentUpon>MismatchedInwardReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MismatchedInwardReturn.aspx.designer.cs">
+      <DependentUpon>MismatchedInwardReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnModifier.aspx.cs">
+      <DependentUpon>InwardReturnModifier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardReturnModifier.aspx.designer.cs">
+      <DependentUpon>InwardReturnModifier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvalidTransactionModifier.aspx.cs">
+      <DependentUpon>InvalidTransactionModifier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvalidTransactionModifier.aspx.designer.cs">
+      <DependentUpon>InvalidTransactionModifier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSettlementReportReconciliator.aspx.cs">
+      <DependentUpon>DetailSettlementReportReconciliator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSettlementReportReconciliator.aspx.designer.cs">
+      <DependentUpon>DetailSettlementReportReconciliator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reconciliator.aspx.cs">
+      <DependentUpon>Reconciliator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reconciliator.aspx.designer.cs">
+      <DependentUpon>Reconciliator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerTransactionBatch.aspx.cs">
+      <DependentUpon>EFTCheckerTransactionBatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTCheckerTransactionBatch.aspx.designer.cs">
+      <DependentUpon>EFTCheckerTransactionBatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnVoucher.aspx.cs">
+      <DependentUpon>InwardReturnVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardReturnVoucher.aspx.designer.cs">
+      <DependentUpon>InwardReturnVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DishonorSentVoucher.aspx.cs">
+      <DependentUpon>DishonorSentVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DishonorSentVoucher.aspx.designer.cs">
+      <DependentUpon>DishonorSentVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnApprovedByMaker.aspx.cs">
+      <DependentUpon>InwardReturnApprovedByMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardReturnApprovedByMaker.aspx.designer.cs">
+      <DependentUpon>InwardReturnApprovedByMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\ReconciliatorHeader.ascx.cs">
+      <DependentUpon>ReconciliatorHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RejectedReceivedReturnApproved.aspx.cs">
+      <DependentUpon>RejectedReceivedReturnApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RejectedReceivedReturnApproved.aspx.designer.cs">
+      <DependentUpon>RejectedReceivedReturnApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RejectedReceivedReturnDishonorSent.aspx.cs">
+      <DependentUpon>RejectedReceivedReturnDishonorSent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RejectedReceivedReturnDishonorSent.aspx.designer.cs">
+      <DependentUpon>RejectedReceivedReturnDishonorSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NOCSentVoucher.aspx.cs">
+      <DependentUpon>NOCSentVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NOCSentVoucher.aspx.designer.cs">
+      <DependentUpon>NOCSentVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\AdminChecker.ascx.cs">
+      <DependentUpon>AdminChecker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReturnSentVoucher.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ReturnSentVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnSentVoucher.aspx.designer.cs">
+      <DependentUpon>ReturnSentVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSettlementDateMaker.aspx.cs">
+      <DependentUpon>UpdateSettlementDateMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateSettlementDateMaker.aspx.designer.cs">
+      <DependentUpon>UpdateSettlementDateMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSettlementReportMaker.aspx.cs">
+      <DependentUpon>DetailSettlementReportMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSettlementReportMaker.aspx.designer.cs">
+      <DependentUpon>DetailSettlementReportMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatusReportMaker.aspx.cs">
+      <DependentUpon>StatusReportMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatusReportMaker.aspx.designer.cs">
+      <DependentUpon>StatusReportMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SettlementReportMaker.aspx.cs">
+      <DependentUpon>SettlementReportMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SettlementReportMaker.aspx.designer.cs">
+      <DependentUpon>SettlementReportMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerReport.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTCheckerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerReport.aspx.designer.cs">
+      <DependentUpon>EFTCheckerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionRejectedByChecker.aspx.cs">
+      <DependentUpon>InwardTransactionRejectedByChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardTransactionRejectedByChecker.aspx.designer.cs">
+      <DependentUpon>InwardTransactionRejectedByChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerAuthorizer.aspx.cs">
+      <DependentUpon>EFTCheckerAuthorizer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTCheckerAuthorizer.aspx.designer.cs">
+      <DependentUpon>EFTCheckerAuthorizer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerEBBS.aspx.cs">
+      <DependentUpon>EFTCheckerEBBS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTCheckerEBBS.aspx.designer.cs">
+      <DependentUpon>EFTCheckerEBBS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionWithMICRForChecker.aspx.cs">
+      <DependentUpon>InwardTransactionWithMICRForChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardTransactionWithMICRForChecker.aspx.designer.cs">
+      <DependentUpon>InwardTransactionWithMICRForChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileWatcherChecker.aspx.cs">
+      <DependentUpon>FileWatcherChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileWatcherChecker.aspx.designer.cs">
+      <DependentUpon>FileWatcherChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFilesForTransactionReceived.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FlatFilesForTransactionReceived.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatFilesForTransactionReceived.aspx.designer.cs">
+      <DependentUpon>FlatFilesForTransactionReceived.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionApprovedChecker.aspx.cs">
+      <DependentUpon>InwardTransactionApprovedChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardTransactionApprovedChecker.aspx.designer.cs">
+      <DependentUpon>InwardTransactionApprovedChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransReceivedVoucher.aspx.cs">
+      <DependentUpon>TransReceivedVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransReceivedVoucher.aspx.designer.cs">
+      <DependentUpon>TransReceivedVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovedNOCChekcer.aspx.cs">
+      <DependentUpon>ApprovedNOCChekcer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovedNOCChekcer.aspx.designer.cs">
+      <DependentUpon>ApprovedNOCChekcer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\DishonorSentXML.cs" />
+    <Compile Include="BLL\ExcelDataEntryObject.cs" />
+    <Compile Include="BLL\ExcelWorks.cs" />
+    <Compile Include="BLL\FieldNameConverter.cs" />
+    <Compile Include="BLL\FileSystemDataSource.cs" />
+    <Compile Include="BLL\FlatFileClient.cs" />
+    <Compile Include="BLL\NOCReceivedXML.cs" />
+    <Compile Include="BLL\NOCSentXML.cs" />
+    <Compile Include="BLL\ReturnReceivedXML.cs" />
+    <Compile Include="BLL\ReturnXML.cs" />
+    <Compile Include="BLL\RNOCSentXML.cs" />
+    <Compile Include="BLL\TransactionCodeGenerator.cs" />
+    <Compile Include="BLL\TransactionReceivedXML.cs" />
+    <Compile Include="BLL\TransactionSentXML.cs" />
+    <Compile Include="component\ApprovedNOCDB.cs" />
+    <Compile Include="component\BranchesDB.cs" />
+    <Compile Include="component\CodeLookUpDB.cs" />
+    <Compile Include="component\EnvelopeDB.cs" />
+    <Compile Include="component\ExcelDB.cs" />
+    <Compile Include="component\FieldNameDB.cs" />
+    <Compile Include="component\PaymentDB.cs" />
+    <Compile Include="component\ReceivedBatchDB.cs" />
+    <Compile Include="component\ReceivedEDRDB.cs" />
+    <Compile Include="component\ReceivedNOCDB.cs" />
+    <Compile Include="component\ReceivedReturnDB.cs" />
+    <Compile Include="component\RejectReasonByCheckerDB.cs" />
+    <Compile Include="component\RNOCBatchDB.cs" />
+    <Compile Include="component\RNOCofNOCDB.cs" />
+    <Compile Include="component\SentBatchDB.cs" />
+    <Compile Include="component\SentDishonorDB.cs" />
+    <Compile Include="component\SentEDRDB.cs" />
+    <Compile Include="component\SentNOCDB.cs" />
+    <Compile Include="component\SentReturnDB.cs" />
+    <Compile Include="component\UserDB.cs" />
+    <Compile Include="ConsumerType.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ConsumerType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumerType.aspx.designer.cs">
+      <DependentUpon>ConsumerType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumerCommonInfo.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ConsumerCommonInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumerCommonInfo.aspx.designer.cs">
+      <DependentUpon>ConsumerCommonInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateUploadCredit.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CorporateUploadCredit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateUploadCredit.aspx.designer.cs">
+      <DependentUpon>CorporateUploadCredit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorToCor.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CorToCor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorToCor.aspx.designer.cs">
+      <DependentUpon>CorToCor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorToInd.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CorToInd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorToInd.aspx.designer.cs">
+      <DependentUpon>CorToInd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailSettlementReport.aspx.cs">
+      <DependentUpon>DetailSettlementReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailSettlementReport.aspx.designer.cs">
+      <DependentUpon>DetailSettlementReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DishonorSentFiles.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>DishonorSentFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DishonorSentFiles.aspx.designer.cs">
+      <DependentUpon>DishonorSentFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTChecker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTChecker.aspx.designer.cs">
+      <DependentUpon>EFTChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerTransactionSent.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTCheckerTransactionSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTCheckerTransactionSent.aspx.designer.cs">
+      <DependentUpon>EFTCheckerTransactionSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTDishonorRejectedForMaker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTDishonorRejectedForMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTDishonorRejectedForMaker.aspx.designer.cs">
+      <DependentUpon>EFTDishonorRejectedForMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTDishonorSentChecker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTDishonorSentChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTDishonorSentChecker.aspx.designer.cs">
+      <DependentUpon>EFTDishonorSentChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTEditNOC.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTEditNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTEditNOC.aspx.designer.cs">
+      <DependentUpon>EFTEditNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTEditReturnSent.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTEditReturnSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTEditReturnSent.aspx.designer.cs">
+      <DependentUpon>EFTEditReturnSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTEditTransactionSent.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTEditTransactionSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTEditTransactionSent.aspx.designer.cs">
+      <DependentUpon>EFTEditTransactionSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTMaker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTMaker.aspx.designer.cs">
+      <DependentUpon>EFTMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTNOCRejectedForMaker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTNOCRejectedForMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTNOCRejectedForMaker.aspx.designer.cs">
+      <DependentUpon>EFTNOCRejectedForMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTReturnRejectedForMaker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTReturnRejectedForMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTReturnRejectedForMaker.aspx.designer.cs">
+      <DependentUpon>EFTReturnRejectedForMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTTransactionRejectedForMaker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EFTTransactionRejectedForMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTTransactionRejectedForMaker.aspx.designer.cs">
+      <DependentUpon>EFTTransactionRejectedForMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportContestedDishonorXML.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ExportContestedDishonorXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportContestedDishonorXML.aspx.designer.cs">
+      <DependentUpon>ExportContestedDishonorXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportDishonor.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ExportDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportDishonor.aspx.designer.cs">
+      <DependentUpon>ExportDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportNOC.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ExportNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportNOC.aspx.designer.cs">
+      <DependentUpon>ExportNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportReturn.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ExportReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportReturn.aspx.designer.cs">
+      <DependentUpon>ExportReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportRNOC.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ExportRNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportRNOC.aspx.designer.cs">
+      <DependentUpon>ExportRNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportToCBS.aspx.cs">
+      <DependentUpon>ExportToCBS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportToCBS.aspx.designer.cs">
+      <DependentUpon>ExportToCBS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileWatcher.aspx.cs">
+      <DependentUpon>FileWatcher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileWatcher.aspx.designer.cs">
+      <DependentUpon>FileWatcher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAck.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ImportAck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAck.aspx.designer.cs">
+      <DependentUpon>ImportAck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDishonor.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ImportDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDishonor.aspx.designer.cs">
+      <DependentUpon>ImportDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportFromCBS.aspx.cs">
+      <DependentUpon>ImportFromCBS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportFromCBS.aspx.designer.cs">
+      <DependentUpon>ImportFromCBS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportRNOC.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ImportRNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportRNOC.aspx.designer.cs">
+      <DependentUpon>ImportRNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndToCor.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>IndToCor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndToCor.aspx.designer.cs">
+      <DependentUpon>IndToCor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndToInd.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>IndToInd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndToInd.aspx.designer.cs">
+      <DependentUpon>IndToInd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardDishonor.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>InwardDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardDishonor.aspx.designer.cs">
+      <DependentUpon>InwardDishonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnMaker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>InwardReturnMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardReturnMaker.aspx.designer.cs">
+      <DependentUpon>InwardReturnMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardSearch.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>InwardSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardSearch.aspx.designer.cs">
+      <DependentUpon>InwardSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionNOCChecker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>InwardTransactionNOCChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionNOCChecker.aspx.designer.cs">
+      <DependentUpon>InwardTransactionNOCChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionReturnChecker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>InwardTransactionReturnChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionReturnChecker.aspx.designer.cs">
+      <DependentUpon>InwardTransactionReturnChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionMaker.aspx.cs">
+      <DependentUpon>InwardTransactionMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InwardTransactionMaker.aspx.designer.cs">
+      <DependentUpon>InwardTransactionMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionManual.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>InwardTransactionManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionManual.aspx.designer.cs">
+      <DependentUpon>InwardTransactionManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionWithMICR.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>InwardTransactionWithMICR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InwardTransactionWithMICR.aspx.designer.cs">
+      <DependentUpon>InwardTransactionWithMICR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfContestedRejectedByChecker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ListOfContestedRejectedByChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfContestedRejectedByChecker.aspx.designer.cs">
+      <DependentUpon>ListOfContestedRejectedByChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfDishonorRejectedByChecker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ListOfDishonorRejectedByChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfDishonorRejectedByChecker.aspx.designer.cs">
+      <DependentUpon>ListOfDishonorRejectedByChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MICRSync.aspx.cs">
+      <DependentUpon>MICRSync.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MICRSync.aspx.designer.cs">
+      <DependentUpon>MICRSync.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\CheckerHeader.ascx.cs">
+      <DependentUpon>CheckerHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\CheckerHeader.ascx.designer.cs">
+      <DependentUpon>CheckerHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modules\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\MakerHeader.ascx.cs">
+      <DependentUpon>MakerHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modules\MakerHeader.ascx.designer.cs">
+      <DependentUpon>MakerHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NOCFiles.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>NOCFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NOCFiles.aspx.designer.cs">
+      <DependentUpon>NOCFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutwardSearch.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>OutwardSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutwardSearch.aspx.designer.cs">
+      <DependentUpon>OutwardSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivedNOCChecker.aspx.cs">
+      <DependentUpon>ReceivedNOCChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReceivedNOCChecker.aspx.designer.cs">
+      <DependentUpon>ReceivedNOCChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RejectedListOfApprovedReceivedNOC.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>RejectedListOfApprovedReceivedNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RejectedListOfApprovedReceivedNOC.aspx.designer.cs">
+      <DependentUpon>RejectedListOfApprovedReceivedNOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnFiles.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ReturnFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnFiles.aspx.designer.cs">
+      <DependentUpon>ReturnFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RNOCFiles.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>RNOCFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RNOCFiles.aspx.designer.cs">
+      <DependentUpon>RNOCFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RNOCofNOCChecker.aspx.cs">
+      <DependentUpon>RNOCofNOCChecker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RNOCofNOCChecker.aspx.designer.cs">
+      <DependentUpon>RNOCofNOCChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RNOCofReceivedNOCRejectedByChecker.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>RNOCofReceivedNOCRejectedByChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RNOCofReceivedNOCRejectedByChecker.aspx.designer.cs">
+      <DependentUpon>RNOCofReceivedNOCRejectedByChecker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SettlementReport.aspx.cs">
+      <DependentUpon>SettlementReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SettlementReport.aspx.designer.cs">
+      <DependentUpon>SettlementReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatusReport.aspx.cs">
+      <DependentUpon>StatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatusReport.aspx.designer.cs">
+      <DependentUpon>StatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrancateEFTDatabase.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>TrancateEFTDatabase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrancateEFTDatabase.aspx.designer.cs">
+      <DependentUpon>TrancateEFTDatabase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionSentFiles.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>TransactionSentFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionSentFiles.aspx.designer.cs">
+      <DependentUpon>TransactionSentFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransSentVoucher.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>TransSentVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransSentVoucher.aspx.designer.cs">
+      <DependentUpon>TransSentVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSettlementDate.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UpdateSettlementDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSettlementDate.aspx.designer.cs">
+      <DependentUpon>UpdateSettlementDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement.aspx.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManagement.aspx.designer.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\AccountMasking.cs" />
+    <Compile Include="Utility\AccountType.cs" />
+    <Compile Include="Utility\CheckDigitCalculator.cs" />
+    <Compile Include="Utility\CodeType.cs" />
+    <Compile Include="Utility\Config.cs" />
+    <Compile Include="Utility\ConnectionStringDecryptor.cs" />
+    <Compile Include="Utility\DVar.cs" />
+    <Compile Include="Utility\DataEntryType.cs" />
+    <Compile Include="Utility\EFTLength.cs" />
+    <Compile Include="Utility\EFTVariableParser.cs" />
+    <Compile Include="Utility\ItemType.cs" />
+    <Compile Include="Utility\NumberToEnglish.cs" />
+    <Compile Include="Utility\ParseData.cs" />
+    <Compile Include="Utility\PaymentType.cs" />
+    <Compile Include="Utility\SetSettlementDate.cs" />
+    <Compile Include="Utility\TransactionCodes.cs" />
+    <Compile Include="Utility\TransactionStatus.cs" />
+    <Compile Include="Utility\UserHistoryVar.cs" />
+    <Compile Include="Web References\PBMServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminChecker.aspx" />
+    <Content Include="app.config" />
+    <Content Include="ApprovedInwardTransaction.aspx" />
+    <Content Include="BatchWiseTransactionDetails.aspx" />
+    <Content Include="bin\EFTGateway.dll" />
+    <Content Include="bin\EFTGateway.pdb" />
+    <Content Include="bin\EFTNAccelerator.dll" />
+    <Content Include="bin\EFTNAccelerator.pdb" />
+    <Content Include="bin\Ionic.Zip.dll" />
+    <Content Include="bin\system.data.oracleclient.dll" />
+    <Content Include="BranchMessages.aspx" />
+    <Content Include="BranchWiseSettlementReport.aspx" />
+    <Content Include="CBSMisMatchReport.aspx" />
+    <Content Include="ChangeAdminCheckerPassword.aspx" />
+    <Content Include="CheckerBranches.aspx" />
+    <Content Include="CheckerUserManagement.aspx" />
+    <Content Include="ChangeReconciliatorPassword.aspx" />
+    <Content Include="BatchSentRejectedByChecker.aspx" />
+    <Content Include="BatchSentVoucher.aspx" />
+    <Content Include="BulkTransactionEdit.aspx" />
+    <Content Include="BulkTransactionList.aspx" />
+    <Content Include="ChangeAuthorizerPassword.aspx" />
+    <Content Include="ChangeReportViewerPassword.aspx" />
+    <Content Include="BranchWiseSettlementReportViewer.aspx" />
+    <Content Include="ChangeClientPassword.aspx" />
+    <Content Include="AdvicePrintStatus.aspx" />
+    <Content Include="BACHBranchReport.aspx" />
+    <Content Include="AdditionalSummaryReport.aspx" />
+    <Content Include="BatchWiseMismatchedTransactionDetails.aspx" />
+    <Content Include="BranchWiseTransactionStatus.aspx" />
+    <Content Include="ChargeAccountManagement.aspx" />
+    <Content Include="ChargeAccountManagementChecker.aspx" />
+    <Content Include="CityChargeAccountsManagement.aspx" />
+    <Content Include="CityChargeDepartmentManagement.aspx" />
+    <Content Include="CityChargeCodeManagement.aspx" />
+    <Content Include="ChangeMasterUserPassword.aspx" />
+    <Content Include="ChangeSuperAdminCheckerPassword.aspx" />
+    <Content Include="RejectedDebitTransactionReport.aspx" />
+    <Content Include="DDIAccountMgtChecker.aspx" />
+    <Content Include="DDIAccountManagement.aspx" />
+    <Content Include="SignatorManagement.aspx" />
+    <Content Include="DDIBatchDetails.aspx" />
+    <Content Include="RegenerateOutwardTransactionChecker.aspx" />
+    <Content Include="SuperAdminCheckerUserManagement.aspx" />
+    <Content Include="ResetMasterPassword.aspx" />
+    <Content Include="modules\SuperAdminCheckerHeader.ascx" />
+    <Content Include="SuperAdminChecker.aspx" />
+    <Content Include="MasterUserManagement.aspx" />
+    <Content Include="modules\SuperAdminHeader.ascx" />
+    <Content Include="SuperAdmin.aspx" />
+    <Content Include="InwardTransactionReturnRecheck.aspx" />
+    <Content Include="RegenerateOutwardTransaction.aspx" />
+    <Content Include="DDIReport.aspx" />
+    <Content Include="DDITransactionManagement.aspx" />
+    <Content Include="EditMessage.aspx" />
+    <Content Include="Messages.aspx" />
+    <Content Include="modules\CommonHeader.ascx" />
+    <Content Include="StandingOrderTransactionList.aspx" />
+    <Content Include="StandingOrderBatchList.aspx" />
+    <Content Include="StandingOrderManagement.aspx" />
+    <Content Include="StandingOrderUpload.aspx" />
+    <Content Include="DetailSettlementRptForCharges.aspx" />
+    <Content Include="InwardSearchForAdmin.aspx" />
+    <Content Include="EFTChargeManagementCity.aspx" />
+    <Content Include="FlatFileForTransactionSentChargeToHUB.aspx" />
+    <Content Include="MICRAccountManagementForChargeChecker.aspx" />
+    <Content Include="MICRAccountManagementForCharge.aspx" />
+    <Content Include="EFTChargeReportAccountWise.aspx" />
+    <Content Include="EFTChargeReportMonthWise.aspx" />
+    <Content Include="EFTChargeReportDateWise.aspx" />
+    <Content Include="EFTChargeReport.aspx" />
+    <Content Include="ProductCodeManagementChecker.aspx" />
+    <Content Include="SegmentCodeManagementChecker.aspx" />
+    <Content Include="MasterCodeManagementChecker.aspx" />
+    <Content Include="EFTChargeManagementChecker.aspx" />
+    <Content Include="ProductCodeManagement.aspx" />
+    <Content Include="SegmentCodeManagement.aspx" />
+    <Content Include="MasterCodeManagement.aspx" />
+    <Content Include="EFTChargeManagement.aspx" />
+    <Content Include="FlatFileForTransactionSentCharge.aspx" />
+    <Content Include="TransactionManager.aspx" />
+    <Content Include="EFTDataTransferToPIBS.aspx" />
+    <Content Include="MonitorReport.aspx" />
+    <Content Include="DetailSettlementReportAck.aspx" />
+    <Content Include="FlatFilesForCSVRejection.aspx" />
+    <Content Include="CSVRejectionReport.aspx" />
+    <Content Include="ExcelUploadForCBSMissMatchCheck.aspx" />
+    <Content Include="UpdateInactiveBranch.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="RemoveTransactionWithInvalidRoutingNo.aspx" />
+    <Content Include="FlatFilesForTransactionReceivedToHUB.aspx" />
+    <Content Include="FlatFilesForReturnReceivedToHUB.aspx" />
+    <Content Include="FlatFileUpdloadForTransactionSent.aspx" />
+    <Content Include="FlatFileForTransactionSentToHUB.aspx" />
+    <Content Include="InwardTransactionStatusReport.aspx" />
+    <Content Include="OutwardDebitSummaryReport.aspx" />
+    <Content Include="OutwardCreditSummaryReport.aspx" />
+    <Content Include="InwardDebitSummaryReport.aspx" />
+    <Content Include="InwardCreditSummaryReport.aspx" />
+    <Content Include="UpdateInactiveBranch6786.aspx" />
+    <Content Include="ZoneWiseReport.aspx" />
+    <Content Include="PrintCustomerAdvice.aspx" />
+    <Content Include="DepartmentManagement.aspx" />
+    <Content Include="DashBoardReport.aspx" />
+    <Content Include="FlatFilesForReturnReceived.aspx" />
+    <Content Include="FinacleTransactionReceivedStatus.aspx" />
+    <Content Include="FinacleTransactionReceivedSynchronizer.aspx" />
+    <Content Include="SearchBranches.aspx" />
+    <Content Include="FinacleTransactionStatus.aspx" />
+    <Content Include="DetailSettlementReportForClient.aspx" />
+    <Content Include="modules\ClientHeader.ascx" />
+    <Content Include="OutwardBulkFromReportViewer.aspx" />
+    <Content Include="CSVReportViewer.aspx" />
+    <Content Include="InwardReturnReportByEffectiveEntryDateViewer.aspx" />
+    <Content Include="MakerCheckerLisitingReportViewer.aspx" />
+    <Content Include="StatusReportViewer.aspx" />
+    <Content Include="SettlementReportViewer.aspx" />
+    <Content Include="DetailSettlementReportViewer.aspx" />
+    <Content Include="EFTReportViewer.aspx" />
+    <Content Include="FinacleSynchronizer.aspx" />
+    <Content Include="modules\ReportViewerHeader.ascx" />
+    <Content Include="UpdateHolidayCalendarMaker.aspx" />
+    <Content Include="UpdateHolidayCalendar.aspx" />
+    <Content Include="EFTCheckerAuthorizerAdmin.aspx" />
+    <Content Include="FlatFileForTransactionSent.aspx" />
+    <Content Include="CSVNonBDTReport.aspx" />
+    <Content Include="CSVBDTReport.aspx" />
+    <Content Include="CSVReport.aspx" />
+    <Content Include="InwardReturnReportByEffectiveEntryDate.aspx" />
+    <Content Include="MakerCheckerLisitingReport.aspx" />
+    <Content Include="modules\CheckerAuthorizer.ascx" />
+    <Content Include="OutwardBulkFromReport.aspx" />
+    <Content Include="OutwardBulkTransactionDetails.aspx" />
+    <Content Include="TotalTransaction.aspx" />
+    <Content Include="InwardSearchForChecker.aspx" />
+    <Content Include="OutwardSearchForChecker.aspx" />
+    <Content Include="UpdateGLAccountChecker.aspx" />
+    <Content Include="UpdateGLAccount.aspx" />
+    <Content Include="EFTMakerReport.aspx" />
+    <Content Include="MismatchedInwardReturn.aspx" />
+    <Content Include="InwardReturnModifier.aspx" />
+    <Content Include="InvalidTransactionModifier.aspx" />
+    <Content Include="DetailSettlementReportReconciliator.aspx" />
+    <Content Include="images\ABCBankLogin.gif" />
+    <Content Include="images\BackTitle.png" />
+    <Content Include="images\BEFTNHeader.jpg" />
+    <Content Include="images\BEFTNHeader1.jpg" />
+    <Content Include="images\boxback.png" />
+    <Content Include="images\BranchMan.gif" />
+    <Content Include="images\BranchMan.png" />
+    <Content Include="images\BranchManOn.gif" />
+    <Content Include="images\BranchManOn.png" />
+    <Content Include="images\bullet.gif" />
+    <Content Include="images\bullet.jpg" />
+    <Content Include="images\ButtonImages.gif" />
+    <Content Include="images\ButtonImages.png" />
+    <Content Include="images\buttontest.gif" />
+    <Content Include="images\buttontest.png" />
+    <Content Include="images\buttontestOn.gif" />
+    <Content Include="images\buttontestOn.png" />
+    <Content Include="images\ChangePass.gif" />
+    <Content Include="images\ChangePass.png" />
+    <Content Include="images\ChangePassOn.gif" />
+    <Content Include="images\ChangePassOn.png" />
+    <Content Include="images\ChangePassword.gif" />
+    <Content Include="images\ChangePassword.png" />
+    <Content Include="images\ChangePasswordOn.gif" />
+    <Content Include="images\ChangePasswordOn.png" />
+    <Content Include="images\DetailSettlementReportMaker.gif" />
+    <Content Include="images\DetailSettlementReportMaker.png" />
+    <Content Include="images\DetailSettletReportMakerOn.gif" />
+    <Content Include="images\DetailSettletReportMakerOn.png" />
+    <Content Include="images\EFTChecker.gif" />
+    <Content Include="images\EFTChecker.png" />
+    <Content Include="images\EFTCheckerAuthorizer.gif" />
+    <Content Include="images\EFTCheckerAuthorizer.png" />
+    <Content Include="images\EFTCheckerAuthorizerOn.gif" />
+    <Content Include="images\EFTCheckerAuthorizerOn.png" />
+    <Content Include="images\EFTCheckerEBBS.gif" />
+    <Content Include="images\EFTCheckerEBBS.png" />
+    <Content Include="images\EFTCheckerEBBSOn.gif" />
+    <Content Include="images\EFTCheckerEBBSOn.png" />
+    <Content Include="images\EFTCheckerOn.gif" />
+    <Content Include="images\EFTCheckerOn.png" />
+    <Content Include="images\EFTMakerHome.gif" />
+    <Content Include="images\EFTMakerHome.png" />
+    <Content Include="images\EFTMakerHomeOn.gif" />
+    <Content Include="images\EFTMakerHomeOn.png" />
+    <Content Include="images\Exit.gif" />
+    <Content Include="images\Exit.png" />
+    <Content Include="images\ExitOn.gif" />
+    <Content Include="images\ExitOn.png" />
+    <Content Include="images\FloraEFTSystem.jpg" />
+    <Content Include="images\GenerateFlat.gif" />
+    <Content Include="images\GenerateFlat.png" />
+    <Content Include="images\GenerateFlatOn.gif" />
+    <Content Include="images\GenerateFlatOn.png" />
+    <Content Include="images\png\BranchMan.png" />
+    <Content Include="images\png\BranchManOn.png" />
+    <Content Include="images\png\buttontest.png" />
+    <Content Include="images\png\buttontestOn.png" />
+    <Content Include="images\png\ChangePass.png" />
+    <Content Include="images\png\ChangePassOn.png" />
+    <Content Include="images\png\ChangePassword.png" />
+    <Content Include="images\png\ChangePasswordOn.png" />
+    <Content Include="images\png\DetailSettlementReportMaker.png" />
+    <Content Include="images\png\DetailSettletReportMakerOn.png" />
+    <Content Include="images\png\EFTChecker.png" />
+    <Content Include="images\png\EFTCheckerAuthorizer.png" />
+    <Content Include="images\png\EFTCheckerAuthorizerOn.png" />
+    <Content Include="images\png\EFTCheckerEBBS.png" />
+    <Content Include="images\png\EFTCheckerEBBSOn.png" />
+    <Content Include="images\png\EFTCheckerOn.png" />
+    <Content Include="images\png\EFTMakerHome.png" />
+    <Content Include="images\png\EFTMakerHomeOn.png" />
+    <Content Include="images\png\Exit.png" />
+    <Content Include="images\png\ExitOn.png" />
+    <Content Include="images\png\GenerateFlat.png" />
+    <Content Include="images\png\GenerateFlatOn.png" />
+    <Content Include="images\png\PrintInward.png" />
+    <Content Include="images\png\PrintInwardOn.png" />
+    <Content Include="images\png\PrintOutward.png" />
+    <Content Include="images\png\PrintOutwardOn.png" />
+    <Content Include="images\png\Report.png" />
+    <Content Include="images\png\ReportOn.png" />
+    <Content Include="images\png\SettlementReportMaker.png" />
+    <Content Include="images\png\SettlementReportMakerOn.png" />
+    <Content Include="images\png\SignOut.png" />
+    <Content Include="images\png\SignOutOn.png" />
+    <Content Include="images\png\StatusReportMaker.png" />
+    <Content Include="images\png\StatusReportMakerOn.png" />
+    <Content Include="images\png\UpdateSettlementDateMaker.png" />
+    <Content Include="images\png\UpdateSettlementDateMakerOn.png" />
+    <Content Include="images\png\UserManagement.png" />
+    <Content Include="images\png\UserManagementOn.png" />
+    <Content Include="images\PrintInward.gif" />
+    <Content Include="images\PrintInward.png" />
+    <Content Include="images\PrintInwardOn.gif" />
+    <Content Include="images\PrintInwardOn.png" />
+    <Content Include="images\PrintOutward.gif" />
+    <Content Include="images\PrintOutward.png" />
+    <Content Include="images\PrintOutwardOn.gif" />
+    <Content Include="images\PrintOutwardOn.png" />
+    <Content Include="images\PrintVouchersForBatchSentOn.gif" />
+    <Content Include="images\PrintVouchersForBatchwiseSe.gif" />
+    <Content Include="images\Report.gif" />
+    <Content Include="images\Report.png" />
+    <Content Include="images\ReportOn.gif" />
+    <Content Include="images\ReportOn.png" />
+    <Content Include="images\Reture.jpg" />
+    <Content Include="images\SCBLogo.JPG" />
+    <Content Include="images\send.jpg" />
+    <Content Include="images\SettlementReportMaker.gif" />
+    <Content Include="images\SettlementReportMaker.png" />
+    <Content Include="images\SettlementReportMakerOn.gif" />
+    <Content Include="images\SettlementReportMakerOn.png" />
+    <Content Include="images\SignOut.gif" />
+    <Content Include="images\SignOut.png" />
+    <Content Include="images\SignOutOn.gif" />
+    <Content Include="images\SignOutOn.png" />
+    <Content Include="images\StatusReportMaker.gif" />
+    <Content Include="images\StatusReportMaker.png" />
+    <Content Include="images\StatusReportMakerOn.gif" />
+    <Content Include="images\StatusReportMakerOn.png" />
+    <Content Include="images\UpdateSettlementDateMaker.gif" />
+    <Content Include="images\UpdateSettlementDateMaker.png" />
+    <Content Include="images\UpdateSettlementDateMakerOn.gif" />
+    <Content Include="images\UpdateSettlementDateMakerOn.png" />
+    <Content Include="images\UserManagement.gif" />
+    <Content Include="images\UserManagement.png" />
+    <Content Include="images\UserManagementOn.gif" />
+    <Content Include="images\UserManagementOn.png" />
+    <Content Include="images\waiting.gif" />
+    <Content Include="images\wire-transfer-icon.jpg" />
+    <Content Include="includes\unitpngfix.js" />
+    <Content Include="Reconciliator.aspx" />
+    <Content Include="EFTCheckerTransactionBatch.aspx" />
+    <Content Include="InwardReturnVoucher.aspx" />
+    <Content Include="DishonorSentVoucher.aspx" />
+    <Content Include="InwardReturnApprovedByMaker.aspx" />
+    <Content Include="modules\ReconciliatorHeader.ascx" />
+    <Content Include="RejectedReceivedReturnApproved.aspx" />
+    <Content Include="RejectedReceivedReturnDishonorSent.aspx" />
+    <Content Include="modules\footer.ascx" />
+    <Content Include="NOCSentVoucher.aspx" />
+    <Content Include="modules\AdminChecker.ascx" />
+    <Content Include="ReturnSentVoucher.aspx" />
+    <Content Include="UpdateSettlementDateMaker.aspx" />
+    <Content Include="DetailSettlementReportMaker.aspx" />
+    <Content Include="StatusReportMaker.aspx" />
+    <Content Include="SettlementReportMaker.aspx" />
+    <Content Include="EFTCheckerReport.aspx" />
+    <Content Include="InwardTransactionRejectedByChecker.aspx" />
+    <Content Include="EFTCheckerAuthorizer.aspx" />
+    <Content Include="EFTCheckerEBBS.aspx" />
+    <Content Include="InwardTransactionWithMICRForChecker.aspx" />
+    <Content Include="FileWatcherChecker.aspx" />
+    <Content Include="FlatFilesForTransactionReceived.aspx" />
+    <Content Include="InwardTransactionApprovedChecker.aspx" />
+    <Content Include="TransReceivedVoucher.aspx" />
+    <Content Include="DetailSettlementReport.aspx" />
+    <Content Include="InwardTransactionWithMICR.aspx" />
+    <Content Include="MICRSync.aspx" />
+    <None Include="images\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PBMServer\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PBMServer\Service1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.100.80.44/fcdbservcie/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NrbIBReturn\</RelPath>
+      <UpdateFromURL>http://10.100.80.44/fcdbservcie/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EFTN_NrbIBReturn_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.220.53:8080/axis2/services/CBLWebServices%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CBLWebServiceReference\</RelPath>
+      <UpdateFromURL>http://192.168.220.53:8080/axis2/services/CBLWebServices%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EFTN_CBLWebServiceReference_CBLWebServices</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/FileMover/Service1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PBMServer\</RelPath>
+      <UpdateFromURL>http://localhost/FileMover/Service1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EFTN_PBMServer_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EFTGateway\EFTGateway.csproj">
+      <Project>{76449FE7-060C-4899-9263-E8CE9689BB76}</Project>
+      <Name>EFTGateway</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFTNAccelerator\EFTNAccelerator.csproj">
+      <Project>{8515E7C8-41FD-408A-B256-321EF9D5C37C}</Project>
+      <Name>EFTNAccelerator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="SamlLog\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49245</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

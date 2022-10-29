@@ -1,0 +1,3772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ax218="http://sql.java/xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ax29="http://city/xsd" xmlns:ns="http://ws.apache.org/axis2" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ax211="http://card/xsd" xmlns:ax216="http://io.java/xsd" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ax214="http://fimi_types_xsd._1_0.two.schemas.compassplus.com/xsd" targetNamespace="http://ws.apache.org/axis2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>CBLWebServices</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://sql.java/xsd">
+      <xs:complexType name="SQLException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SQLState" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="errorCode" type="xs:int" />
+          <xs:element minOccurs="0" name="nextException" nillable="true" type="ax218:SQLException" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax217="http://io.java/xsd" xmlns:ax219="http://sql.java/xsd" xmlns:ax212="http://card/xsd" xmlns:ax210="http://city/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.apache.org/axis2">
+      <xs:import namespace="http://city/xsd" />
+      <xs:import namespace="http://card/xsd" />
+      <xs:import namespace="http://io.java/xsd" />
+      <xs:import namespace="http://sql.java/xsd" />
+      <xs:element name="processVisaTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:ProcessVisaTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="processVisaTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:ProcessVisaTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetCustomerDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetCustomerDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getFinacleRate">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetFincleRateRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getFinacleRateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetFincleRateResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="debitCardAccount">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:DebitCardAccountRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="debitCardAccountResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:DebitCardAccountResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="creditCardAccount">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:CreditCardAccountRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="creditCardAccountResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:CreditCardAccountResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerCardDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetCustomerCardDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerCardDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetCustomerCardDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClientCardDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetCustomerCardDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClientCardDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetClientCardDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCardByContract">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetCardByContractRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCardByContractResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetCardByContractResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerDebitCards">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetCustomerDebitCardsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerDebitCardsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetCustomerDebitCardsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCardAccountStatement">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetCardCurrentStatementRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCardAccountStatementResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetCardCurrentStatementResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doMobileTopup">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:DoMobileTopupRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doMobileTopupResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:DoMobileTopupResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAccountDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetAccountDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAccountDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetAccountDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doInternetBillPayment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:DoInternetBillPaymentRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doInternetBillPaymentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:DoInternetBillPaymentResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOtherBanksPayee">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetOtherBanksPayeeRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOtherBanksPayeeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetOtherBanksPayeeResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doOtherBankTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:DoOtherBankTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doOtherBankTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:DoOtherBankTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doOtherBankScheduleTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:DoOtherBankShceduleTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doOtherBankScheduleTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:DoOtherBankShceduleTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCreditCardDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetCreditCardDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCreditCardDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetCreditCardDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTermDepositAccountDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetTermDepositAccountDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTermDepositAccountDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetTermDepositAccountDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="stopSingleChequeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:StopChequeRq" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="stopSingleChequeRequestResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:CardTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateCustomerInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:UpdateCustomerInfoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateCustomerInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:UpdateCustomerInfoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getMultipleChequeStatusEnquiry">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetMultipleChequeStatusEnquiryRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getMultipleChequeStatusEnquiryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetMultipleChequeStatusEnquiryResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getMultipleChequeStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetMultipleChequeStatusRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getMultipleChequeStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetMultipleChequeStatusResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="changeCardStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:ChangeCardStatusRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="changeCardStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:BlockCreditCardResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="changeAccountStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:ChangeAccountStatusRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="changeAccountStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:BlockCreditCardResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSingleChequeStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetSingleChequeStatusRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSingleChequeStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetSingleChequeStatusResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLoanAccountDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetLoanAccountDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLoanAccountDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetLoanAccountDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTDAccountsSummary">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetTDAccountsSummaryRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTDAccountsSummaryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetTDAccountsSummaryResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCASAMiniStatement">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetCASAMiniStatementRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCASAMiniStatementResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetCASAMiniStatementResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLoanRepaymentSchedule">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetRepaymentScheduleRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLoanRepaymentScheduleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetRepaymentScheduleResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCASADetailsStatement">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetCASADetailsStatementRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCASADetailsStatementResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetCASADetailsStatementResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCreditCardsSummary">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetCardsSummaryRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCreditCardsSummaryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetCardSummaryResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLoanDetailsStatement">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetLoanDetailsStatementRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLoanDetailsStatementResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetLoanDetailsStatementResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTermDepositDetailsStatement">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetTermDepositDetailsStatementRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTermDepositDetailsStatementResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetTermDepositDetailsStatementResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCASAAccountsSummary">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetAccountsSummaryRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCASAAccountsSummaryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetCASAAccountsSummaryResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLoanAccountsSummary">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetAccountsSummaryRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLoanAccountsSummaryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetLoanAccountsSummaryResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doFinacleTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:FinacleTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doFinacleTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:TransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="reverseFinacleTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:ReverseFinacleTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="reverseFinacleTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:TransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doCardPurchaseTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:CardPurchaseTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="doCardPurchaseTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:CardTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="reverseCardPurchaseTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:ReverseCardPurchaseTransactionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="reverseCardPurchaseTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:CardTransactionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CBLWebServicesIOException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="IOException" nillable="true" type="ax217:IOException" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CBLWebServicesSQLException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="SQLException" nillable="true" type="ax219:SQLException" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAccountImage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetAccountImageRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAccountImageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTransactionList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetTransactionListRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTransactionListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetTransactionListResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLastTransactionDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetLastTransactionDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLastTransactionDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax210:GetLastTransactionDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClientCardsByPhone">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetClientCardsByPhoneRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClientCardsByPhoneResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetClientCardsByPhoneResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getDebitCardAccounts">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetDebitCardAccountsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getDebitCardAccountsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetDebitCardAccountsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getIBAuthentication">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax210:GetIBAuthenticationRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getIBAuthenticationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCreditCardBalances">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetCreditCardBalancesRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCreditCardBalancesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetCreditCardBalancesResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCreditLastStatementDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:GetCreditLastStatementRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCreditLastStatementDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:GetCreditLastStatementDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="creditCardPaymentFromCASA">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="request" nillable="true" type="ax212:CreditCardPaymentFromCASARequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="creditCardPaymentFromCASAResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax212:CreditCardPaymentFromCASAResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:ax215="http://fimi_types_xsd._1_0.two.schemas.compassplus.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://card/xsd">
+      <xs:import namespace="http://fimi_types_xsd._1_0.two.schemas.compassplus.com/xsd" />
+      <xs:complexType name="GetFincleRateRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fixedCurrency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="rateCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="varCurrency" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetFincleRateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="rate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DebitCardAccountRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DebitCardAccountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="approvalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CreditCardAccountRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CreditCardAccountResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="approvalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCustomerCardDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCustomerCardDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax211:Card" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Card">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardHolderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetClientCardDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax211:CustomerCard" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustomerCard">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bdtAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardContract" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardHolderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="usdAccount" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCardByContractRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardContract" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="last4digit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCardByContractResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax211:CustomerCard" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DebitCardList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardCVV2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardPIN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCardCurrentStatementRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="periodic" type="xs:boolean" />
+          <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCardCurrentStatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax211:CardStatementList" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CardStatementList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="settlementAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="settlementCurrency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sourceAmount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="sourceCurrency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="terminalDetails" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ChangeCardStatusRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardStatus" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="changeReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="BlockCreditCardResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ChangeAccountStatusRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountStatus" nillable="true" type="ax215:AcctStatus" />
+          <xs:element minOccurs="0" name="blockCurrency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="changeReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="clientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCardsSummaryRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="clientId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCardSummaryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax211:SummaryCardList" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SummaryCardList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="availableBalanceBdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="availableBalanceUsd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardHolderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentDueAmountBdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentDueAmountUsd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentDueDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="statementDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="totalOutstandingBdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="totalOutstandingUsd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="usdFlag" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetClientCardsByPhoneRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="other" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="phoneNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetClientCardsByPhoneResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax211:ClientCard" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ClientCard">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="birthDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardHolderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="custAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fatherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="motherName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetDebitCardAccountsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="debitCardNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetDebitCardAccountsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax211:CardAccount" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CardAccount">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCreditCardBalancesRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCreditCardBalancesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax211:CreditCardBalancesResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CreditCardBalancesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="availableBalanceBdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="availableBalanceUsd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentDueAmountBdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentDueAmountUsd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="totalOutstandingBdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="totalOutstandingUsd" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCreditLastStatementRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCreditLastStatementDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax211:GetCreditLastStatementResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCreditLastStatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="newBalance" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentDueAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentDueDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="previousBalance" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="statementDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CreditCardPaymentFromCASARequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountCurrency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="customerAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="originalAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="originalCurrency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CreditCardPaymentFromCASAResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="approvalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://io.java/xsd">
+      <xs:complexType name="IOException">
+        <xs:sequence />
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:ax213="http://card/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://city/xsd">
+      <xs:import namespace="http://card/xsd" />
+      <xs:complexType name="ProcessVisaTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="receipentCardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ProcessVisaTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionRefNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCustomerDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="clientCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCustomerDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:Customer" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Customer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="address2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="branchName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="customerCity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="customerCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="customerPostcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="occupationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCustomerDebitCardsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCustomerDebitCardsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax213:DebitCardList" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DoMobileTopupRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="connectiontype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mobileNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sourceAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DoMobileTopupResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionRefNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetAccountDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetAccountDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:Account" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Account">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="account" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="acctClsDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="acctClsFlg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="acctOpenDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="acctOwnership" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="acctStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="acctType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="availBalance" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="balance" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="branchName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chargeApplicable" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chequeAllowed" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="contactNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="custId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="dob" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fatherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="freezeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="freezeReasonCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="glSubHeadCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="landPhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lienAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="motherName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nationalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="passport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="permanentAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="prodcutCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="schemeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="schemeType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="solId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="systemReservedAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="unClearBalance" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DoInternetBillPaymentRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardInfo" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="cardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="stakeholder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionSource" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="waimax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="wimaxAccountNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DoInternetBillPaymentResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionRefNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetOtherBanksPayeeRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetOtherBanksPayeeResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax29:OtherBankPayee" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OtherBankPayee">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="otherBankAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="payeeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="routingNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DoOtherBankTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="dfiAccNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="receiverName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="routingNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="senderAccNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DoOtherBankTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionRefNumber" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DoOtherBankShceduleTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="beginDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="dfiAccNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="idNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="receiverName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="routingNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="senderAccNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="transactionFrequency" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DoOtherBankShceduleTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionRefNumber" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCreditCardDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCreditCardDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:CreditCardDetailsResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CreditCardDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="availableCashLimit" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="availableCreditLimit" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="cashLimit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="creditLimit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currentBalance" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ledgerCredit" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="paymentReceived" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTermDepositAccountDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTermDepositAccountDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:TermDepositAccountDetailsResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TermDepositAccountDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="branchName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="depositAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="depositDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="interestRate" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="maturityAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="maturityDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="StopChequeRq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chequeNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CardTransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionRefNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UpdateCustomerInfoRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="UpdateCustomerInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="xs:anyType" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetMultipleChequeStatusEnquiryRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chequeBookNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetMultipleChequeStatusEnquiryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax29:GetChequeBookEnquiryShedule" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetChequeBookEnquiryShedule">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="chequeBookNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="debit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="particulars" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="postDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetMultipleChequeStatusRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetMultipleChequeStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax29:GetCheckBookShedule" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCheckBookShedule">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="chequeBookNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="issueDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="numberOfLeaves" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetSingleChequeStatusRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chequeNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetSingleChequeStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:SingleChequeStatusResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SingleChequeStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="amount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="chequeNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="chequeStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="debit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="particulars" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="postDate" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetLoanAccountDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetLoanAccountDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:LoanAccountDetails" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="LoanAccountDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="balanceTenure" type="xs:int" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="customerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="disbursalDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="disbursalStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="disbursedAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="installmentAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="installmentStartDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="interestRate" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="loanAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="loanEndDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="loanStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nextInstallmentDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="originalTenureMonths" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="outstandingInterest" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="outstandingPrincipal" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="overdueInterest" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="overdueOtherCharges" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="overduePrincipal" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sanctionAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="sanctionDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="statusAsOn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tenureBalanceMonths" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="tenureBalanceYears" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="totalOutstanding" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="totalRepaymentAmount" nillable="true" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTDAccountsSummaryRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTDAccountsSummaryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax29:TDAccountsSummaryResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TDAccountsSummaryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="balance" type="xs:double" />
+          <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="branchName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ledgerBalance" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tenor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCASAMiniStatementRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCASAMiniStatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:CASAMinistatementResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CASAMinistatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="availableBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="clearBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="totalBalance" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="transactionList" nillable="true" type="ax29:MiniStatementTransationList" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="MiniStatementTransationList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="availableBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="deposit" type="xs:double" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="outstandingBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="refCheque" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="withdraw" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetRepaymentScheduleRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetRepaymentScheduleResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:RepaymentScheduleResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RepaymentScheduleResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="repaymentList" nillable="true" type="ax29:LoanRepaymentShedule" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="LoanRepaymentShedule">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="emiAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="installmentDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="installmentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="interestAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="loanOutStanding" type="xs:double" />
+          <xs:element minOccurs="0" name="openingBalance" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="principalAmount" nillable="true" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCASADetailsStatementRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCASADetailsStatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:CASADetailsStatementResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CASADetailsStatementResponse">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax29:ResponseBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="accountHolderName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="accountStatus" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="accountType" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="openingBalance" type="xs:double" />
+              <xs:element minOccurs="0" name="totalBalance" type="xs:double" />
+              <xs:element minOccurs="0" name="totalCredit" type="xs:double" />
+              <xs:element minOccurs="0" name="totalDebit" type="xs:double" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="transactionList" nillable="true" type="ax29:MiniStatementTransationList" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="GetLoanDetailsStatementRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetLoanDetailsStatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:LoanDetailsStatementResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="LoanDetailsStatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountHolderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="interestRate" type="xs:double" />
+          <xs:element minOccurs="0" name="openingBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="tenor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="totalBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="totalCredit" type="xs:double" />
+          <xs:element minOccurs="0" name="totalDebit" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="transactionList" nillable="true" type="ax29:MiniStatementTransationList" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTermDepositDetailsStatementRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTermDepositDetailsStatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseData" nillable="true" type="ax29:TermDepositDetailsStatementResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TermDepositDetailsStatementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountHolderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="interestRate" type="xs:double" />
+          <xs:element minOccurs="0" name="openingBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="tenor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="totalBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="totalCredit" type="xs:double" />
+          <xs:element minOccurs="0" name="totalDebit" type="xs:double" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="transactionList" nillable="true" type="ax29:MiniStatementTransationList" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetAccountsSummaryRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cbsCustomerID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCASAAccountsSummaryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax29:AccountsSummaryResponse" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AccountsSummaryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="availableBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ledgerBalance" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetLoanAccountsSummaryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax29:LoanAccountSummary" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="LoanAccountSummary">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="accountType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="availableBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="branchCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ledgerBalance" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nextInstallmentDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="outStandingBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tenor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="FinacleTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="creditAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="debitAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TransactionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionRefNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ReverseFinacleTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="creditAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="debitAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="transactionDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionRefNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CardPurchaseTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="merchantId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="terminalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ReverseCardPurchaseTransactionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardNoActual" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="merchantId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="terminalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="transactionRefNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetAccountImageRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="other" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTransactionListRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="noOfTransaction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTransactionListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax29:Transaction" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Transaction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="tranDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tranType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetLastTransactionDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="other" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetLastTransactionDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="responseData" nillable="true" type="ax29:Transaction" />
+          <xs:element minOccurs="0" name="responseMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetIBAuthenticationRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cityTouchPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cityTouchUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="other" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://fimi_types_xsd._1_0.two.schemas.compassplus.com/xsd">
+      <xs:complexType name="AcctStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="value" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getCreditCardDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getCreditCardDetails" />
+  </wsdl:message>
+  <wsdl:message name="getCreditCardDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getCreditCardDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLoanRepaymentScheduleRequest">
+    <wsdl:part name="parameters" element="ns:getLoanRepaymentSchedule" />
+  </wsdl:message>
+  <wsdl:message name="getLoanRepaymentScheduleResponse">
+    <wsdl:part name="parameters" element="ns:getLoanRepaymentScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLoanAccountsSummaryRequest">
+    <wsdl:part name="parameters" element="ns:getLoanAccountsSummary" />
+  </wsdl:message>
+  <wsdl:message name="getLoanAccountsSummaryResponse">
+    <wsdl:part name="parameters" element="ns:getLoanAccountsSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLastTransactionDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getLastTransactionDetails" />
+  </wsdl:message>
+  <wsdl:message name="getLastTransactionDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getLastTransactionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getClientCardsByPhoneRequest">
+    <wsdl:part name="parameters" element="ns:getClientCardsByPhone" />
+  </wsdl:message>
+  <wsdl:message name="getClientCardsByPhoneResponse">
+    <wsdl:part name="parameters" element="ns:getClientCardsByPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="doCardPurchaseTransactionRequest">
+    <wsdl:part name="parameters" element="ns:doCardPurchaseTransaction" />
+  </wsdl:message>
+  <wsdl:message name="doCardPurchaseTransactionResponse">
+    <wsdl:part name="parameters" element="ns:doCardPurchaseTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCASAAccountsSummaryRequest">
+    <wsdl:part name="parameters" element="ns:getCASAAccountsSummary" />
+  </wsdl:message>
+  <wsdl:message name="getCASAAccountsSummaryResponse">
+    <wsdl:part name="parameters" element="ns:getCASAAccountsSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLastTrxnsDetailsRequest" />
+  <wsdl:message name="getLastTrxnsDetailsResponse" />
+  <wsdl:message name="getCASAMiniStatementRequest">
+    <wsdl:part name="parameters" element="ns:getCASAMiniStatement" />
+  </wsdl:message>
+  <wsdl:message name="getCASAMiniStatementResponse">
+    <wsdl:part name="parameters" element="ns:getCASAMiniStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCardByContractRequest">
+    <wsdl:part name="parameters" element="ns:getCardByContract" />
+  </wsdl:message>
+  <wsdl:message name="getCardByContractResponse">
+    <wsdl:part name="parameters" element="ns:getCardByContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMultipleChequeStatusRequest">
+    <wsdl:part name="parameters" element="ns:getMultipleChequeStatus" />
+  </wsdl:message>
+  <wsdl:message name="getMultipleChequeStatusResponse">
+    <wsdl:part name="parameters" element="ns:getMultipleChequeStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="reverseCardPurchaseTransactionRequest">
+    <wsdl:part name="parameters" element="ns:reverseCardPurchaseTransaction" />
+  </wsdl:message>
+  <wsdl:message name="reverseCardPurchaseTransactionResponse">
+    <wsdl:part name="parameters" element="ns:reverseCardPurchaseTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="doFinacleTransactionRequest">
+    <wsdl:part name="parameters" element="ns:doFinacleTransaction" />
+  </wsdl:message>
+  <wsdl:message name="doFinacleTransactionResponse">
+    <wsdl:part name="parameters" element="ns:doFinacleTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCreditCardsSummaryRequest">
+    <wsdl:part name="parameters" element="ns:getCreditCardsSummary" />
+  </wsdl:message>
+  <wsdl:message name="getCreditCardsSummaryResponse">
+    <wsdl:part name="parameters" element="ns:getCreditCardsSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateCustomerInfoRequest">
+    <wsdl:part name="parameters" element="ns:updateCustomerInfo" />
+  </wsdl:message>
+  <wsdl:message name="updateCustomerInfoResponse">
+    <wsdl:part name="parameters" element="ns:updateCustomerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerDebitCardsRequest">
+    <wsdl:part name="parameters" element="ns:getCustomerDebitCards" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerDebitCardsResponse">
+    <wsdl:part name="parameters" element="ns:getCustomerDebitCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLoanAccountDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getLoanAccountDetails" />
+  </wsdl:message>
+  <wsdl:message name="getLoanAccountDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getLoanAccountDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountImageRequest">
+    <wsdl:part name="parameters" element="ns:getAccountImage" />
+  </wsdl:message>
+  <wsdl:message name="getAccountImageResponse">
+    <wsdl:part name="parameters" element="ns:getAccountImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="CBLWebServicesIOException">
+    <wsdl:part name="parameters" element="ns:CBLWebServicesIOException" />
+  </wsdl:message>
+  <wsdl:message name="CBLWebServicesSQLException">
+    <wsdl:part name="parameters" element="ns:CBLWebServicesSQLException" />
+  </wsdl:message>
+  <wsdl:message name="getCreditLastStatementDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getCreditLastStatementDetails" />
+  </wsdl:message>
+  <wsdl:message name="getCreditLastStatementDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getCreditLastStatementDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="creditCardAccountRequest">
+    <wsdl:part name="parameters" element="ns:creditCardAccount" />
+  </wsdl:message>
+  <wsdl:message name="creditCardAccountResponse">
+    <wsdl:part name="parameters" element="ns:creditCardAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFinacleRateRequest">
+    <wsdl:part name="parameters" element="ns:getFinacleRate" />
+  </wsdl:message>
+  <wsdl:message name="getFinacleRateResponse">
+    <wsdl:part name="parameters" element="ns:getFinacleRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getClientCardDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getClientCardDetails" />
+  </wsdl:message>
+  <wsdl:message name="getClientCardDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getClientCardDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIBAuthenticationRequest">
+    <wsdl:part name="parameters" element="ns:getIBAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="getIBAuthenticationResponse">
+    <wsdl:part name="parameters" element="ns:getIBAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getCustomerDetails" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getCustomerDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLoanDetailsStatementRequest">
+    <wsdl:part name="parameters" element="ns:getLoanDetailsStatement" />
+  </wsdl:message>
+  <wsdl:message name="getLoanDetailsStatementResponse">
+    <wsdl:part name="parameters" element="ns:getLoanDetailsStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerCardDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getCustomerCardDetails" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerCardDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getCustomerCardDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="reverseFinacleTransactionRequest">
+    <wsdl:part name="parameters" element="ns:reverseFinacleTransaction" />
+  </wsdl:message>
+  <wsdl:message name="reverseFinacleTransactionResponse">
+    <wsdl:part name="parameters" element="ns:reverseFinacleTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTermDepositAccountDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getTermDepositAccountDetails" />
+  </wsdl:message>
+  <wsdl:message name="getTermDepositAccountDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getTermDepositAccountDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDebitCardAccountsRequest">
+    <wsdl:part name="parameters" element="ns:getDebitCardAccounts" />
+  </wsdl:message>
+  <wsdl:message name="getDebitCardAccountsResponse">
+    <wsdl:part name="parameters" element="ns:getDebitCardAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMultipleChequeStatusEnquiryRequest">
+    <wsdl:part name="parameters" element="ns:getMultipleChequeStatusEnquiry" />
+  </wsdl:message>
+  <wsdl:message name="getMultipleChequeStatusEnquiryResponse">
+    <wsdl:part name="parameters" element="ns:getMultipleChequeStatusEnquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTransactionListRequest">
+    <wsdl:part name="parameters" element="ns:getTransactionList" />
+  </wsdl:message>
+  <wsdl:message name="getTransactionListResponse">
+    <wsdl:part name="parameters" element="ns:getTransactionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="processVisaTransactionRequest">
+    <wsdl:part name="parameters" element="ns:processVisaTransaction" />
+  </wsdl:message>
+  <wsdl:message name="processVisaTransactionResponse">
+    <wsdl:part name="parameters" element="ns:processVisaTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTermDepositDetailsStatementRequest">
+    <wsdl:part name="parameters" element="ns:getTermDepositDetailsStatement" />
+  </wsdl:message>
+  <wsdl:message name="getTermDepositDetailsStatementResponse">
+    <wsdl:part name="parameters" element="ns:getTermDepositDetailsStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCASADetailsStatementRequest">
+    <wsdl:part name="parameters" element="ns:getCASADetailsStatement" />
+  </wsdl:message>
+  <wsdl:message name="getCASADetailsStatementResponse">
+    <wsdl:part name="parameters" element="ns:getCASADetailsStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getAccountDetails" />
+  </wsdl:message>
+  <wsdl:message name="getAccountDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getAccountDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getOtherBanksPayeeRequest">
+    <wsdl:part name="parameters" element="ns:getOtherBanksPayee" />
+  </wsdl:message>
+  <wsdl:message name="getOtherBanksPayeeResponse">
+    <wsdl:part name="parameters" element="ns:getOtherBanksPayeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="creditCardPaymentFromCASARequest">
+    <wsdl:part name="parameters" element="ns:creditCardPaymentFromCASA" />
+  </wsdl:message>
+  <wsdl:message name="creditCardPaymentFromCASAResponse">
+    <wsdl:part name="parameters" element="ns:creditCardPaymentFromCASAResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTrxnListRequest" />
+  <wsdl:message name="getTrxnListResponse" />
+  <wsdl:message name="getCardAccountStatementRequest">
+    <wsdl:part name="parameters" element="ns:getCardAccountStatement" />
+  </wsdl:message>
+  <wsdl:message name="getCardAccountStatementResponse">
+    <wsdl:part name="parameters" element="ns:getCardAccountStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="doOtherBankScheduleTransactionRequest">
+    <wsdl:part name="parameters" element="ns:doOtherBankScheduleTransaction" />
+  </wsdl:message>
+  <wsdl:message name="doOtherBankScheduleTransactionResponse">
+    <wsdl:part name="parameters" element="ns:doOtherBankScheduleTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTDAccountsSummaryRequest">
+    <wsdl:part name="parameters" element="ns:getTDAccountsSummary" />
+  </wsdl:message>
+  <wsdl:message name="getTDAccountsSummaryResponse">
+    <wsdl:part name="parameters" element="ns:getTDAccountsSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="doMobileTopupRequest">
+    <wsdl:part name="parameters" element="ns:doMobileTopup" />
+  </wsdl:message>
+  <wsdl:message name="doMobileTopupResponse">
+    <wsdl:part name="parameters" element="ns:doMobileTopupResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCASAMiniStatement2Request" />
+  <wsdl:message name="getCASAMiniStatement2Response" />
+  <wsdl:message name="getCreditCardBalancesRequest">
+    <wsdl:part name="parameters" element="ns:getCreditCardBalances" />
+  </wsdl:message>
+  <wsdl:message name="getCreditCardBalancesResponse">
+    <wsdl:part name="parameters" element="ns:getCreditCardBalancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="doOtherBankTransactionRequest">
+    <wsdl:part name="parameters" element="ns:doOtherBankTransaction" />
+  </wsdl:message>
+  <wsdl:message name="doOtherBankTransactionResponse">
+    <wsdl:part name="parameters" element="ns:doOtherBankTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSingleChequeStatusRequest">
+    <wsdl:part name="parameters" element="ns:getSingleChequeStatus" />
+  </wsdl:message>
+  <wsdl:message name="getSingleChequeStatusResponse">
+    <wsdl:part name="parameters" element="ns:getSingleChequeStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="doInternetBillPaymentRequest">
+    <wsdl:part name="parameters" element="ns:doInternetBillPayment" />
+  </wsdl:message>
+  <wsdl:message name="doInternetBillPaymentResponse">
+    <wsdl:part name="parameters" element="ns:doInternetBillPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="debitCardAccountRequest">
+    <wsdl:part name="parameters" element="ns:debitCardAccount" />
+  </wsdl:message>
+  <wsdl:message name="debitCardAccountResponse">
+    <wsdl:part name="parameters" element="ns:debitCardAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="changeAccountStatusRequest">
+    <wsdl:part name="parameters" element="ns:changeAccountStatus" />
+  </wsdl:message>
+  <wsdl:message name="changeAccountStatusResponse">
+    <wsdl:part name="parameters" element="ns:changeAccountStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="stopSingleChequeRequestRequest">
+    <wsdl:part name="parameters" element="ns:stopSingleChequeRequest" />
+  </wsdl:message>
+  <wsdl:message name="stopSingleChequeRequestResponse">
+    <wsdl:part name="parameters" element="ns:stopSingleChequeRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="changeCardStatusRequest">
+    <wsdl:part name="parameters" element="ns:changeCardStatus" />
+  </wsdl:message>
+  <wsdl:message name="changeCardStatusResponse">
+    <wsdl:part name="parameters" element="ns:changeCardStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CBLWebServicesPortType">
+    <wsdl:operation name="getCreditCardDetails">
+      <wsdl:input wsaw:Action="urn:getCreditCardDetails" message="ns:getCreditCardDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getCreditCardDetailsResponse" message="ns:getCreditCardDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLoanRepaymentSchedule">
+      <wsdl:input wsaw:Action="urn:getLoanRepaymentSchedule" message="ns:getLoanRepaymentScheduleRequest" />
+      <wsdl:output wsaw:Action="urn:getLoanRepaymentScheduleResponse" message="ns:getLoanRepaymentScheduleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLoanAccountsSummary">
+      <wsdl:input wsaw:Action="urn:getLoanAccountsSummary" message="ns:getLoanAccountsSummaryRequest" />
+      <wsdl:output wsaw:Action="urn:getLoanAccountsSummaryResponse" message="ns:getLoanAccountsSummaryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLastTransactionDetails">
+      <wsdl:input wsaw:Action="urn:getLastTransactionDetails" message="ns:getLastTransactionDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getLastTransactionDetailsResponse" message="ns:getLastTransactionDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientCardsByPhone">
+      <wsdl:input wsaw:Action="urn:getClientCardsByPhone" message="ns:getClientCardsByPhoneRequest" />
+      <wsdl:output wsaw:Action="urn:getClientCardsByPhoneResponse" message="ns:getClientCardsByPhoneResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="doCardPurchaseTransaction">
+      <wsdl:input wsaw:Action="urn:doCardPurchaseTransaction" message="ns:doCardPurchaseTransactionRequest" />
+      <wsdl:output wsaw:Action="urn:doCardPurchaseTransactionResponse" message="ns:doCardPurchaseTransactionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCASAAccountsSummary">
+      <wsdl:input wsaw:Action="urn:getCASAAccountsSummary" message="ns:getCASAAccountsSummaryRequest" />
+      <wsdl:output wsaw:Action="urn:getCASAAccountsSummaryResponse" message="ns:getCASAAccountsSummaryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLastTrxnsDetails">
+      <wsdl:input wsaw:Action="urn:getLastTrxnsDetails" message="ns:getLastTrxnsDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getLastTrxnsDetailsResponse" message="ns:getLastTrxnsDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCASAMiniStatement">
+      <wsdl:input wsaw:Action="urn:getCASAMiniStatement" message="ns:getCASAMiniStatementRequest" />
+      <wsdl:output wsaw:Action="urn:getCASAMiniStatementResponse" message="ns:getCASAMiniStatementResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCardByContract">
+      <wsdl:input wsaw:Action="urn:getCardByContract" message="ns:getCardByContractRequest" />
+      <wsdl:output wsaw:Action="urn:getCardByContractResponse" message="ns:getCardByContractResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMultipleChequeStatus">
+      <wsdl:input wsaw:Action="urn:getMultipleChequeStatus" message="ns:getMultipleChequeStatusRequest" />
+      <wsdl:output wsaw:Action="urn:getMultipleChequeStatusResponse" message="ns:getMultipleChequeStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="reverseCardPurchaseTransaction">
+      <wsdl:input wsaw:Action="urn:reverseCardPurchaseTransaction" message="ns:reverseCardPurchaseTransactionRequest" />
+      <wsdl:output wsaw:Action="urn:reverseCardPurchaseTransactionResponse" message="ns:reverseCardPurchaseTransactionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="doFinacleTransaction">
+      <wsdl:input wsaw:Action="urn:doFinacleTransaction" message="ns:doFinacleTransactionRequest" />
+      <wsdl:output wsaw:Action="urn:doFinacleTransactionResponse" message="ns:doFinacleTransactionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCardsSummary">
+      <wsdl:input wsaw:Action="urn:getCreditCardsSummary" message="ns:getCreditCardsSummaryRequest" />
+      <wsdl:output wsaw:Action="urn:getCreditCardsSummaryResponse" message="ns:getCreditCardsSummaryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomerInfo">
+      <wsdl:input wsaw:Action="urn:updateCustomerInfo" message="ns:updateCustomerInfoRequest" />
+      <wsdl:output wsaw:Action="urn:updateCustomerInfoResponse" message="ns:updateCustomerInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDebitCards">
+      <wsdl:input wsaw:Action="urn:getCustomerDebitCards" message="ns:getCustomerDebitCardsRequest" />
+      <wsdl:output wsaw:Action="urn:getCustomerDebitCardsResponse" message="ns:getCustomerDebitCardsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLoanAccountDetails">
+      <wsdl:input wsaw:Action="urn:getLoanAccountDetails" message="ns:getLoanAccountDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getLoanAccountDetailsResponse" message="ns:getLoanAccountDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountImage">
+      <wsdl:input wsaw:Action="urn:getAccountImage" message="ns:getAccountImageRequest" />
+      <wsdl:output wsaw:Action="urn:getAccountImageResponse" message="ns:getAccountImageResponse" />
+      <wsdl:fault wsaw:Action="urn:getAccountImageCBLWebServicesIOException" name="CBLWebServicesIOException" message="ns:CBLWebServicesIOException" />
+      <wsdl:fault wsaw:Action="urn:getAccountImageCBLWebServicesSQLException" name="CBLWebServicesSQLException" message="ns:CBLWebServicesSQLException" />
+    </wsdl:operation>
+    <wsdl:operation name="getCreditLastStatementDetails">
+      <wsdl:input wsaw:Action="urn:getCreditLastStatementDetails" message="ns:getCreditLastStatementDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getCreditLastStatementDetailsResponse" message="ns:getCreditLastStatementDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="creditCardAccount">
+      <wsdl:input wsaw:Action="urn:creditCardAccount" message="ns:creditCardAccountRequest" />
+      <wsdl:output wsaw:Action="urn:creditCardAccountResponse" message="ns:creditCardAccountResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getFinacleRate">
+      <wsdl:input wsaw:Action="urn:getFinacleRate" message="ns:getFinacleRateRequest" />
+      <wsdl:output wsaw:Action="urn:getFinacleRateResponse" message="ns:getFinacleRateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientCardDetails">
+      <wsdl:input wsaw:Action="urn:getClientCardDetails" message="ns:getClientCardDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getClientCardDetailsResponse" message="ns:getClientCardDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getIBAuthentication">
+      <wsdl:input wsaw:Action="urn:getIBAuthentication" message="ns:getIBAuthenticationRequest" />
+      <wsdl:output wsaw:Action="urn:getIBAuthenticationResponse" message="ns:getIBAuthenticationResponse" />
+      <wsdl:fault wsaw:Action="urn:getIBAuthenticationCBLWebServicesIOException" name="CBLWebServicesIOException" message="ns:CBLWebServicesIOException" />
+      <wsdl:fault wsaw:Action="urn:getIBAuthenticationCBLWebServicesSQLException" name="CBLWebServicesSQLException" message="ns:CBLWebServicesSQLException" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDetails">
+      <wsdl:input wsaw:Action="urn:getCustomerDetails" message="ns:getCustomerDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getCustomerDetailsResponse" message="ns:getCustomerDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLoanDetailsStatement">
+      <wsdl:input wsaw:Action="urn:getLoanDetailsStatement" message="ns:getLoanDetailsStatementRequest" />
+      <wsdl:output wsaw:Action="urn:getLoanDetailsStatementResponse" message="ns:getLoanDetailsStatementResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerCardDetails">
+      <wsdl:input wsaw:Action="urn:getCustomerCardDetails" message="ns:getCustomerCardDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getCustomerCardDetailsResponse" message="ns:getCustomerCardDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="reverseFinacleTransaction">
+      <wsdl:input wsaw:Action="urn:reverseFinacleTransaction" message="ns:reverseFinacleTransactionRequest" />
+      <wsdl:output wsaw:Action="urn:reverseFinacleTransactionResponse" message="ns:reverseFinacleTransactionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermDepositAccountDetails">
+      <wsdl:input wsaw:Action="urn:getTermDepositAccountDetails" message="ns:getTermDepositAccountDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getTermDepositAccountDetailsResponse" message="ns:getTermDepositAccountDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDebitCardAccounts">
+      <wsdl:input wsaw:Action="urn:getDebitCardAccounts" message="ns:getDebitCardAccountsRequest" />
+      <wsdl:output wsaw:Action="urn:getDebitCardAccountsResponse" message="ns:getDebitCardAccountsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMultipleChequeStatusEnquiry">
+      <wsdl:input wsaw:Action="urn:getMultipleChequeStatusEnquiry" message="ns:getMultipleChequeStatusEnquiryRequest" />
+      <wsdl:output wsaw:Action="urn:getMultipleChequeStatusEnquiryResponse" message="ns:getMultipleChequeStatusEnquiryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionList">
+      <wsdl:input wsaw:Action="urn:getTransactionList" message="ns:getTransactionListRequest" />
+      <wsdl:output wsaw:Action="urn:getTransactionListResponse" message="ns:getTransactionListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="processVisaTransaction">
+      <wsdl:input wsaw:Action="urn:processVisaTransaction" message="ns:processVisaTransactionRequest" />
+      <wsdl:output wsaw:Action="urn:processVisaTransactionResponse" message="ns:processVisaTransactionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTermDepositDetailsStatement">
+      <wsdl:input wsaw:Action="urn:getTermDepositDetailsStatement" message="ns:getTermDepositDetailsStatementRequest" />
+      <wsdl:output wsaw:Action="urn:getTermDepositDetailsStatementResponse" message="ns:getTermDepositDetailsStatementResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCASADetailsStatement">
+      <wsdl:input wsaw:Action="urn:getCASADetailsStatement" message="ns:getCASADetailsStatementRequest" />
+      <wsdl:output wsaw:Action="urn:getCASADetailsStatementResponse" message="ns:getCASADetailsStatementResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountDetails">
+      <wsdl:input wsaw:Action="urn:getAccountDetails" message="ns:getAccountDetailsRequest" />
+      <wsdl:output wsaw:Action="urn:getAccountDetailsResponse" message="ns:getAccountDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getOtherBanksPayee">
+      <wsdl:input wsaw:Action="urn:getOtherBanksPayee" message="ns:getOtherBanksPayeeRequest" />
+      <wsdl:output wsaw:Action="urn:getOtherBanksPayeeResponse" message="ns:getOtherBanksPayeeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="creditCardPaymentFromCASA">
+      <wsdl:input wsaw:Action="urn:creditCardPaymentFromCASA" message="ns:creditCardPaymentFromCASARequest" />
+      <wsdl:output wsaw:Action="urn:creditCardPaymentFromCASAResponse" message="ns:creditCardPaymentFromCASAResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTrxnList">
+      <wsdl:input wsaw:Action="urn:getTrxnList" message="ns:getTrxnListRequest" />
+      <wsdl:output wsaw:Action="urn:getTrxnListResponse" message="ns:getTrxnListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCardAccountStatement">
+      <wsdl:input wsaw:Action="urn:getCardAccountStatement" message="ns:getCardAccountStatementRequest" />
+      <wsdl:output wsaw:Action="urn:getCardAccountStatementResponse" message="ns:getCardAccountStatementResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="doOtherBankScheduleTransaction">
+      <wsdl:input wsaw:Action="urn:doOtherBankScheduleTransaction" message="ns:doOtherBankScheduleTransactionRequest" />
+      <wsdl:output wsaw:Action="urn:doOtherBankScheduleTransactionResponse" message="ns:doOtherBankScheduleTransactionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTDAccountsSummary">
+      <wsdl:input wsaw:Action="urn:getTDAccountsSummary" message="ns:getTDAccountsSummaryRequest" />
+      <wsdl:output wsaw:Action="urn:getTDAccountsSummaryResponse" message="ns:getTDAccountsSummaryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="doMobileTopup">
+      <wsdl:input wsaw:Action="urn:doMobileTopup" message="ns:doMobileTopupRequest" />
+      <wsdl:output wsaw:Action="urn:doMobileTopupResponse" message="ns:doMobileTopupResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCASAMiniStatement2">
+      <wsdl:input wsaw:Action="urn:getCASAMiniStatement2" message="ns:getCASAMiniStatement2Request" />
+      <wsdl:output wsaw:Action="urn:getCASAMiniStatement2Response" message="ns:getCASAMiniStatement2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCardBalances">
+      <wsdl:input wsaw:Action="urn:getCreditCardBalances" message="ns:getCreditCardBalancesRequest" />
+      <wsdl:output wsaw:Action="urn:getCreditCardBalancesResponse" message="ns:getCreditCardBalancesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="doOtherBankTransaction">
+      <wsdl:input wsaw:Action="urn:doOtherBankTransaction" message="ns:doOtherBankTransactionRequest" />
+      <wsdl:output wsaw:Action="urn:doOtherBankTransactionResponse" message="ns:doOtherBankTransactionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSingleChequeStatus">
+      <wsdl:input wsaw:Action="urn:getSingleChequeStatus" message="ns:getSingleChequeStatusRequest" />
+      <wsdl:output wsaw:Action="urn:getSingleChequeStatusResponse" message="ns:getSingleChequeStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="doInternetBillPayment">
+      <wsdl:input wsaw:Action="urn:doInternetBillPayment" message="ns:doInternetBillPaymentRequest" />
+      <wsdl:output wsaw:Action="urn:doInternetBillPaymentResponse" message="ns:doInternetBillPaymentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="debitCardAccount">
+      <wsdl:input wsaw:Action="urn:debitCardAccount" message="ns:debitCardAccountRequest" />
+      <wsdl:output wsaw:Action="urn:debitCardAccountResponse" message="ns:debitCardAccountResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="changeAccountStatus">
+      <wsdl:input wsaw:Action="urn:changeAccountStatus" message="ns:changeAccountStatusRequest" />
+      <wsdl:output wsaw:Action="urn:changeAccountStatusResponse" message="ns:changeAccountStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="stopSingleChequeRequest">
+      <wsdl:input wsaw:Action="urn:stopSingleChequeRequest" message="ns:stopSingleChequeRequestRequest" />
+      <wsdl:output wsaw:Action="urn:stopSingleChequeRequestResponse" message="ns:stopSingleChequeRequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="changeCardStatus">
+      <wsdl:input wsaw:Action="urn:changeCardStatus" message="ns:changeCardStatusRequest" />
+      <wsdl:output wsaw:Action="urn:changeCardStatusResponse" message="ns:changeCardStatusResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CBLWebServicesSoap11Binding" type="ns:CBLWebServicesPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCreditCardDetails">
+      <soap:operation soapAction="urn:getCreditCardDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanRepaymentSchedule">
+      <soap:operation soapAction="urn:getLoanRepaymentSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanAccountsSummary">
+      <soap:operation soapAction="urn:getLoanAccountsSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastTransactionDetails">
+      <soap:operation soapAction="urn:getLastTransactionDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doCardPurchaseTransaction">
+      <soap:operation soapAction="urn:doCardPurchaseTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientCardsByPhone">
+      <soap:operation soapAction="urn:getClientCardsByPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASAAccountsSummary">
+      <soap:operation soapAction="urn:getCASAAccountsSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastTrxnsDetails">
+      <soap:operation soapAction="urn:getLastTrxnsDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASAMiniStatement">
+      <soap:operation soapAction="urn:getCASAMiniStatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCardByContract">
+      <soap:operation soapAction="urn:getCardByContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMultipleChequeStatus">
+      <soap:operation soapAction="urn:getMultipleChequeStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverseCardPurchaseTransaction">
+      <soap:operation soapAction="urn:reverseCardPurchaseTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCardsSummary">
+      <soap:operation soapAction="urn:getCreditCardsSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doFinacleTransaction">
+      <soap:operation soapAction="urn:doFinacleTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomerInfo">
+      <soap:operation soapAction="urn:updateCustomerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanAccountDetails">
+      <soap:operation soapAction="urn:getLoanAccountDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDebitCards">
+      <soap:operation soapAction="urn:getCustomerDebitCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountImage">
+      <soap:operation soapAction="urn:getAccountImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CBLWebServicesIOException">
+        <soap:fault use="literal" name="CBLWebServicesIOException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="CBLWebServicesSQLException">
+        <soap:fault use="literal" name="CBLWebServicesSQLException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditLastStatementDetails">
+      <soap:operation soapAction="urn:getCreditLastStatementDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="creditCardAccount">
+      <soap:operation soapAction="urn:creditCardAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFinacleRate">
+      <soap:operation soapAction="urn:getFinacleRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientCardDetails">
+      <soap:operation soapAction="urn:getClientCardDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIBAuthentication">
+      <soap:operation soapAction="urn:getIBAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CBLWebServicesIOException">
+        <soap:fault use="literal" name="CBLWebServicesIOException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="CBLWebServicesSQLException">
+        <soap:fault use="literal" name="CBLWebServicesSQLException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDetails">
+      <soap:operation soapAction="urn:getCustomerDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanDetailsStatement">
+      <soap:operation soapAction="urn:getLoanDetailsStatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerCardDetails">
+      <soap:operation soapAction="urn:getCustomerCardDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverseFinacleTransaction">
+      <soap:operation soapAction="urn:reverseFinacleTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermDepositAccountDetails">
+      <soap:operation soapAction="urn:getTermDepositAccountDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDebitCardAccounts">
+      <soap:operation soapAction="urn:getDebitCardAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMultipleChequeStatusEnquiry">
+      <soap:operation soapAction="urn:getMultipleChequeStatusEnquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processVisaTransaction">
+      <soap:operation soapAction="urn:processVisaTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionList">
+      <soap:operation soapAction="urn:getTransactionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermDepositDetailsStatement">
+      <soap:operation soapAction="urn:getTermDepositDetailsStatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASADetailsStatement">
+      <soap:operation soapAction="urn:getCASADetailsStatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountDetails">
+      <soap:operation soapAction="urn:getAccountDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOtherBanksPayee">
+      <soap:operation soapAction="urn:getOtherBanksPayee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTrxnList">
+      <soap:operation soapAction="urn:getTrxnList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="creditCardPaymentFromCASA">
+      <soap:operation soapAction="urn:creditCardPaymentFromCASA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCardAccountStatement">
+      <soap:operation soapAction="urn:getCardAccountStatement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doOtherBankScheduleTransaction">
+      <soap:operation soapAction="urn:doOtherBankScheduleTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTDAccountsSummary">
+      <soap:operation soapAction="urn:getTDAccountsSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASAMiniStatement2">
+      <soap:operation soapAction="urn:getCASAMiniStatement2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doMobileTopup">
+      <soap:operation soapAction="urn:doMobileTopup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doOtherBankTransaction">
+      <soap:operation soapAction="urn:doOtherBankTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCardBalances">
+      <soap:operation soapAction="urn:getCreditCardBalances" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSingleChequeStatus">
+      <soap:operation soapAction="urn:getSingleChequeStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doInternetBillPayment">
+      <soap:operation soapAction="urn:doInternetBillPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="debitCardAccount">
+      <soap:operation soapAction="urn:debitCardAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stopSingleChequeRequest">
+      <soap:operation soapAction="urn:stopSingleChequeRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeAccountStatus">
+      <soap:operation soapAction="urn:changeAccountStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeCardStatus">
+      <soap:operation soapAction="urn:changeCardStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CBLWebServicesSoap12Binding" type="ns:CBLWebServicesPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCreditCardDetails">
+      <soap12:operation soapAction="urn:getCreditCardDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanRepaymentSchedule">
+      <soap12:operation soapAction="urn:getLoanRepaymentSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanAccountsSummary">
+      <soap12:operation soapAction="urn:getLoanAccountsSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastTransactionDetails">
+      <soap12:operation soapAction="urn:getLastTransactionDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doCardPurchaseTransaction">
+      <soap12:operation soapAction="urn:doCardPurchaseTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientCardsByPhone">
+      <soap12:operation soapAction="urn:getClientCardsByPhone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASAAccountsSummary">
+      <soap12:operation soapAction="urn:getCASAAccountsSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastTrxnsDetails">
+      <soap12:operation soapAction="urn:getLastTrxnsDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASAMiniStatement">
+      <soap12:operation soapAction="urn:getCASAMiniStatement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCardByContract">
+      <soap12:operation soapAction="urn:getCardByContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMultipleChequeStatus">
+      <soap12:operation soapAction="urn:getMultipleChequeStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverseCardPurchaseTransaction">
+      <soap12:operation soapAction="urn:reverseCardPurchaseTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCardsSummary">
+      <soap12:operation soapAction="urn:getCreditCardsSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doFinacleTransaction">
+      <soap12:operation soapAction="urn:doFinacleTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomerInfo">
+      <soap12:operation soapAction="urn:updateCustomerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanAccountDetails">
+      <soap12:operation soapAction="urn:getLoanAccountDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDebitCards">
+      <soap12:operation soapAction="urn:getCustomerDebitCards" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountImage">
+      <soap12:operation soapAction="urn:getAccountImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CBLWebServicesIOException">
+        <soap12:fault use="literal" name="CBLWebServicesIOException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="CBLWebServicesSQLException">
+        <soap12:fault use="literal" name="CBLWebServicesSQLException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditLastStatementDetails">
+      <soap12:operation soapAction="urn:getCreditLastStatementDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="creditCardAccount">
+      <soap12:operation soapAction="urn:creditCardAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFinacleRate">
+      <soap12:operation soapAction="urn:getFinacleRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientCardDetails">
+      <soap12:operation soapAction="urn:getClientCardDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIBAuthentication">
+      <soap12:operation soapAction="urn:getIBAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CBLWebServicesIOException">
+        <soap12:fault use="literal" name="CBLWebServicesIOException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="CBLWebServicesSQLException">
+        <soap12:fault use="literal" name="CBLWebServicesSQLException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDetails">
+      <soap12:operation soapAction="urn:getCustomerDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanDetailsStatement">
+      <soap12:operation soapAction="urn:getLoanDetailsStatement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerCardDetails">
+      <soap12:operation soapAction="urn:getCustomerCardDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverseFinacleTransaction">
+      <soap12:operation soapAction="urn:reverseFinacleTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermDepositAccountDetails">
+      <soap12:operation soapAction="urn:getTermDepositAccountDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDebitCardAccounts">
+      <soap12:operation soapAction="urn:getDebitCardAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMultipleChequeStatusEnquiry">
+      <soap12:operation soapAction="urn:getMultipleChequeStatusEnquiry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processVisaTransaction">
+      <soap12:operation soapAction="urn:processVisaTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionList">
+      <soap12:operation soapAction="urn:getTransactionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermDepositDetailsStatement">
+      <soap12:operation soapAction="urn:getTermDepositDetailsStatement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASADetailsStatement">
+      <soap12:operation soapAction="urn:getCASADetailsStatement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountDetails">
+      <soap12:operation soapAction="urn:getAccountDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOtherBanksPayee">
+      <soap12:operation soapAction="urn:getOtherBanksPayee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTrxnList">
+      <soap12:operation soapAction="urn:getTrxnList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="creditCardPaymentFromCASA">
+      <soap12:operation soapAction="urn:creditCardPaymentFromCASA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCardAccountStatement">
+      <soap12:operation soapAction="urn:getCardAccountStatement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doOtherBankScheduleTransaction">
+      <soap12:operation soapAction="urn:doOtherBankScheduleTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTDAccountsSummary">
+      <soap12:operation soapAction="urn:getTDAccountsSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASAMiniStatement2">
+      <soap12:operation soapAction="urn:getCASAMiniStatement2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doMobileTopup">
+      <soap12:operation soapAction="urn:doMobileTopup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doOtherBankTransaction">
+      <soap12:operation soapAction="urn:doOtherBankTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCardBalances">
+      <soap12:operation soapAction="urn:getCreditCardBalances" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSingleChequeStatus">
+      <soap12:operation soapAction="urn:getSingleChequeStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doInternetBillPayment">
+      <soap12:operation soapAction="urn:doInternetBillPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="debitCardAccount">
+      <soap12:operation soapAction="urn:debitCardAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stopSingleChequeRequest">
+      <soap12:operation soapAction="urn:stopSingleChequeRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeAccountStatus">
+      <soap12:operation soapAction="urn:changeAccountStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeCardStatus">
+      <soap12:operation soapAction="urn:changeCardStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CBLWebServicesHttpBinding" type="ns:CBLWebServicesPortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getCreditCardDetails">
+      <http:operation location="getCreditCardDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanRepaymentSchedule">
+      <http:operation location="getLoanRepaymentSchedule" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanAccountsSummary">
+      <http:operation location="getLoanAccountsSummary" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastTransactionDetails">
+      <http:operation location="getLastTransactionDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doCardPurchaseTransaction">
+      <http:operation location="doCardPurchaseTransaction" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientCardsByPhone">
+      <http:operation location="getClientCardsByPhone" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASAAccountsSummary">
+      <http:operation location="getCASAAccountsSummary" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastTrxnsDetails">
+      <http:operation location="getLastTrxnsDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASAMiniStatement">
+      <http:operation location="getCASAMiniStatement" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCardByContract">
+      <http:operation location="getCardByContract" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMultipleChequeStatus">
+      <http:operation location="getMultipleChequeStatus" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverseCardPurchaseTransaction">
+      <http:operation location="reverseCardPurchaseTransaction" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCardsSummary">
+      <http:operation location="getCreditCardsSummary" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doFinacleTransaction">
+      <http:operation location="doFinacleTransaction" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomerInfo">
+      <http:operation location="updateCustomerInfo" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanAccountDetails">
+      <http:operation location="getLoanAccountDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDebitCards">
+      <http:operation location="getCustomerDebitCards" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountImage">
+      <http:operation location="getAccountImage" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditLastStatementDetails">
+      <http:operation location="getCreditLastStatementDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="creditCardAccount">
+      <http:operation location="creditCardAccount" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFinacleRate">
+      <http:operation location="getFinacleRate" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientCardDetails">
+      <http:operation location="getClientCardDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIBAuthentication">
+      <http:operation location="getIBAuthentication" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDetails">
+      <http:operation location="getCustomerDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanDetailsStatement">
+      <http:operation location="getLoanDetailsStatement" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerCardDetails">
+      <http:operation location="getCustomerCardDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reverseFinacleTransaction">
+      <http:operation location="reverseFinacleTransaction" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermDepositAccountDetails">
+      <http:operation location="getTermDepositAccountDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDebitCardAccounts">
+      <http:operation location="getDebitCardAccounts" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMultipleChequeStatusEnquiry">
+      <http:operation location="getMultipleChequeStatusEnquiry" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processVisaTransaction">
+      <http:operation location="processVisaTransaction" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionList">
+      <http:operation location="getTransactionList" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTermDepositDetailsStatement">
+      <http:operation location="getTermDepositDetailsStatement" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASADetailsStatement">
+      <http:operation location="getCASADetailsStatement" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountDetails">
+      <http:operation location="getAccountDetails" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOtherBanksPayee">
+      <http:operation location="getOtherBanksPayee" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTrxnList">
+      <http:operation location="getTrxnList" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="creditCardPaymentFromCASA">
+      <http:operation location="creditCardPaymentFromCASA" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCardAccountStatement">
+      <http:operation location="getCardAccountStatement" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doOtherBankScheduleTransaction">
+      <http:operation location="doOtherBankScheduleTransaction" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTDAccountsSummary">
+      <http:operation location="getTDAccountsSummary" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCASAMiniStatement2">
+      <http:operation location="getCASAMiniStatement2" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doMobileTopup">
+      <http:operation location="doMobileTopup" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doOtherBankTransaction">
+      <http:operation location="doOtherBankTransaction" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCreditCardBalances">
+      <http:operation location="getCreditCardBalances" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSingleChequeStatus">
+      <http:operation location="getSingleChequeStatus" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doInternetBillPayment">
+      <http:operation location="doInternetBillPayment" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="debitCardAccount">
+      <http:operation location="debitCardAccount" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stopSingleChequeRequest">
+      <http:operation location="stopSingleChequeRequest" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeAccountStatus">
+      <http:operation location="changeAccountStatus" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeCardStatus">
+      <http:operation location="changeCardStatus" />
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CBLWebServices">
+    <wsdl:port name="CBLWebServicesHttpSoap11Endpoint" binding="ns:CBLWebServicesSoap11Binding">
+      <soap:address location="http://192.168.220.53:8080/axis2/services/CBLWebServices.CBLWebServicesHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="CBLWebServicesHttpSoap12Endpoint" binding="ns:CBLWebServicesSoap12Binding">
+      <soap12:address location="http://192.168.220.53:8080/axis2/services/CBLWebServices.CBLWebServicesHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="CBLWebServicesHttpEndpoint" binding="ns:CBLWebServicesHttpBinding">
+      <http:address location="http://192.168.220.53:8080/axis2/services/CBLWebServices.CBLWebServicesHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
